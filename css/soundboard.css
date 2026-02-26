@@ -1,0 +1,299 @@
+/* ============================================================
+   PROFESSIONAL SOUNDBOARD — Advanced Tech Stack
+   Premium dark hardware aesthetic
+   ============================================================ */
+
+/* --- Device body --- */
+.soundboard-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: linear-gradient(175deg, #18202e 0%, #0f1520 100%);
+    border-radius: 20px;
+    padding: 28px 28px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: none;
+}
+
+/* Subtle noise/texture overlay */
+.soundboard-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 160px;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Corner screws */
+.soundboard-screw {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 38% 32%, #2e3546, #161c28);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.soundboard-screw::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 50%;
+    background: conic-gradient(from 45deg,
+            transparent 0deg 90deg,
+            rgba(255, 255, 255, 0.15) 90deg 180deg,
+            transparent 180deg 270deg,
+            rgba(255, 255, 255, 0.07) 270deg 360deg);
+}
+
+.soundboard-screw.tl {
+    top: 10px;
+    left: 10px;
+}
+
+.soundboard-screw.tr {
+    top: 10px;
+    right: 10px;
+}
+
+.soundboard-screw.bl {
+    bottom: 10px;
+    left: 10px;
+}
+
+.soundboard-screw.br {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* --- Brand bar --- */
+.soundboard-brand-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.soundboard-brand-name {
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.18);
+    font-family: 'Inter', monospace;
+}
+
+.soundboard-led-row {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.soundboard-led {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+.soundboard-led.led-green {
+    background: #22d3a0;
+    box-shadow: 0 0 5px rgba(34, 211, 160, 0.8);
+}
+
+.soundboard-led.led-amber {
+    background: #f59e0b;
+    box-shadow: 0 0 5px rgba(245, 158, 11, 0.7);
+}
+
+.soundboard-led.led-red {
+    background: #ef4444;
+    box-shadow: 0 0 5px rgba(239, 68, 68, 0.7);
+}
+
+/* --- Pad grid --- */
+.soundboard-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* =============================================
+   PAD BUTTON
+   ============================================= */
+.soundboard-pad {
+    position: relative;
+    width: 86px;
+    height: 90px;
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: 11px;
+    transform: translateY(0) scale(1);
+    transition:
+        transform 0.22s cubic-bezier(0.34, 1.4, 0.64, 1),
+        filter 0.22s ease;
+    will-change: transform;
+}
+
+/* Pad body */
+.soundboard-pad-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 8px 8px;
+    overflow: hidden;
+
+    /* Premium dark surface */
+    background: linear-gradient(160deg, #1e2738 0%, #161e2e 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-top-color: rgba(255, 255, 255, 0.10);
+
+    /* Physical depth shadow */
+    box-shadow:
+        0 5px 0 #0a0e18,
+        0 7px 14px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    transition:
+        box-shadow 0.22s ease,
+        background 0.22s ease,
+        border-color 0.22s ease;
+}
+
+/* Inner gloss */
+.soundboard-pad-face::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.045), transparent);
+    border-radius: 11px 11px 50% 50%;
+    pointer-events: none;
+}
+
+/* Left edge color strip */
+.soundboard-pad-stripe {
+    position: absolute;
+    left: 0;
+    top: 12%;
+    bottom: 12%;
+    width: 3px;
+    border-radius: 0 3px 3px 0;
+    opacity: 0;
+    transition: opacity 0.22s ease, width 0.22s ease;
+}
+
+/* Icon */
+.soundboard-pad-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.28);
+    transition:
+        color 0.22s ease,
+        transform 0.22s cubic-bezier(0.34, 1.4, 0.64, 1),
+        text-shadow 0.22s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Label */
+.soundboard-pad-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.22);
+    line-height: 1.25;
+    width: 88px;
+    white-space: normal;
+    word-break: break-word;
+    transition: color 0.22s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* =============================================
+   HOVER — lifts up, color activates
+   ============================================= */
+.soundboard-pad:hover {
+    transform: translateY(-9px) scale(1.02);
+}
+
+.soundboard-pad:hover .soundboard-pad-face {
+    background: linear-gradient(160deg, #242e44 0%, #1a2235 100%);
+    border-top-color: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.10);
+    box-shadow:
+        0 12px 0 #0a0e18,
+        0 16px 36px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+}
+
+.soundboard-pad:hover .soundboard-pad-stripe {
+    opacity: 1;
+}
+
+.soundboard-pad:hover .soundboard-pad-icon {
+    transform: translateY(-1px) scale(1.14);
+}
+
+.soundboard-pad:hover .soundboard-pad-label {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* =============================================
+   ACTIVE — depresses
+   ============================================= */
+.soundboard-pad:active {
+    transform: translateY(-2px) scale(0.99);
+}
+
+.soundboard-pad:active .soundboard-pad-face {
+    box-shadow:
+        0 2px 0 #0a0e18,
+        0 4px 10px rgba(0, 0, 0, 0.4),
+        inset 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 900px) {
+    .soundboard-wrapper {
+        padding: 20px 16px;
+    }
+
+    .soundboard-pad {
+        width: 78px;
+        height: 82px;
+    }
+}
+
+@media (max-width: 600px) {
+    .soundboard-pad {
+        width: 70px;
+        height: 76px;
+    }
+
+    .soundboard-pad-icon {
+        font-size: 1.2rem;
+    }
+
+    .soundboard-grid {
+        gap: 8px;
+    }
+}

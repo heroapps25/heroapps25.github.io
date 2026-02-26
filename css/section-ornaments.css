@@ -1,0 +1,55 @@
+/* Section Ornaments & Premium Design Enhancements */
+
+:root {
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Glassmorphism Compound Card */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(37, 99, 235, 0.3);
+    box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Disable hover lift and shadows on contact section containers */
+#contact .glass-card {
+    box-shadow: none;
+}
+
+#contact .glass-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* Section Specific Refinements */
+.page-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Typography Gradient Fix */
+.premium-heading {
+    margin-bottom: var(--space-4);
+}
+
+.premium-heading span {
+    display: inline-block;
+}

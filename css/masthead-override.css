@@ -1,0 +1,178 @@
+/* Forced Overrides for Masthead Contrast */
+
+header.masthead.bg-slate-900 {
+    background-color: var(--slate-900) !important;
+    background-image: none !important;
+    color: white !important;
+    padding-top: 10rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.lottie-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+header.masthead .container {
+    position: relative;
+    z-index: 1;
+}
+
+header.masthead.bg-slate-900 h1,
+header.masthead.bg-slate-900 h2,
+header.masthead.bg-slate-900 h3,
+header.masthead.bg-slate-900 p,
+header.masthead.bg-slate-900 span:not(.text-gradient) {
+    color: white !important;
+}
+
+header.masthead.bg-slate-900 .text-slate-300 {
+    color: var(--slate-300) !important;
+}
+
+header.masthead.bg-slate-900 .text-slate-400 {
+    color: var(--slate-400) !important;
+}
+
+/* Navbar visibility at top */
+#mainNav:not(.navbar-shrink) .nav-link {
+    color: white !important;
+}
+
+#mainNav:not(.navbar-shrink) .navbar-brand {
+    color: white !important;
+}
+
+/* Mobile Responsiveness for Masthead */
+@media (max-width: 991.98px) {
+    header.masthead.bg-slate-900 {
+        padding-top: 8rem !important;
+        padding-bottom: 4rem !important;
+        text-align: center;
+    }
+
+    /* Center align the buttons/actions in the column */
+    header.masthead.bg-slate-900 .col-lg-7 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header.masthead.bg-slate-900 .d-flex.flex-wrap {
+        justify-content: center;
+    }
+
+    header.masthead.bg-slate-900 h1 {
+        font-size: 2.5rem;
+    }
+
+    header.masthead.bg-slate-900 .lead {
+        font-size: 1.1rem;
+    }
+
+    /* Reorder columns on mobile - image first, then text */
+    header.masthead.bg-slate-900 .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /* Reset the margin bottom for image column on mobile */
+    header.masthead.bg-slate-900 .col-lg-5 {
+        margin-bottom: 3rem;
+    }
+
+    header.masthead.bg-slate-900 .col-lg-7 {
+        margin-bottom: 0;
+    }
+
+    /* Reposition Lottie background behind hero image on mobile */
+    header.masthead.bg-slate-900 .lottie-background {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 110%;
+        height: 500px;
+        opacity: 0.3;
+        z-index: 0;
+    }
+
+    /* Ensure hero image container is positioned relative */
+    header.masthead.bg-slate-900 .col-lg-5 {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    header.masthead.bg-slate-900 {
+        padding-top: 7rem !important;
+    }
+
+    header.masthead.bg-slate-900 h1 {
+        font-size: 2rem;
+    }
+
+    header.masthead.bg-slate-900 .btn-lg {
+        width: 100%;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Make buttons stack properly */
+    header.masthead.bg-slate-900 .d-flex.flex-wrap.gap-3 {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem !important;
+    }
+
+    /* Remove border from hero image */
+    header.masthead.bg-slate-900 .hero-image-wrapper {
+        border: none !important;
+    }
+
+    /* Make stat cards circular on mobile */
+    header.masthead.bg-slate-900 .position-absolute {
+        width: 80px !important;
+        height: 80px !important;
+        border-radius: 50% !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Adjust positioning for mobile */
+    header.masthead.bg-slate-900 .position-absolute.top-0.start-0 {
+        top: -10px !important;
+        left: -10px !important;
+        transform: none !important;
+    }
+
+    header.masthead.bg-slate-900 .position-absolute.bottom-0.end-0 {
+        bottom: -10px !important;
+        right: -10px !important;
+        margin-right: 0 !important;
+        transform: none !important;
+    }
+
+    /* Adjust stat card text size for circular layout */
+    header.masthead.bg-slate-900 .position-absolute .h4 {
+        font-size: 1.25rem !important;
+        margin-bottom: 0 !important;
+    }
+
+    header.masthead.bg-slate-900 .position-absolute .small {
+        font-size: 0.65rem !important;
+        line-height: 1.1;
+        text-align: center;
+    }
+}

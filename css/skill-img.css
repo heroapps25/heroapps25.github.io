@@ -1,0 +1,43 @@
+/* Skill Image Sizing for SVG logos like Kotlin */
+.skill-img {
+    height: 80px;
+    width: auto;
+    display: inline-block;
+    transition: all 0.3s ease;
+    filter: grayscale(100%) brightness(0.4);
+}
+
+.skill-item:hover .skill-img {
+    transform: scale(1.2);
+    filter: grayscale(0%) brightness(1);
+}
+
+/* Android icon hover color */
+.skill-item:hover .fa-android {
+    color: #3DDC84 !important;
+}
+
+/* Coroutines & Flows - Kotlin purple/blue */
+.skill-item:hover .fa-random {
+    color: #7F52FF !important;
+}
+
+/* Clean Architecture - Blue */
+.skill-item:hover .fa-shield-alt {
+    color: #4A90E2 !important;
+}
+
+/* Hilt / Dagger - Orange (dependency injection) */
+.skill-item:hover .fa-syringe {
+    color: #FF6B35 !important;
+}
+
+/* Retrofit / Moshi - Teal (networking) */
+.skill-item:hover .fa-exchange-alt {
+    color: #00BCD4 !important;
+}
+
+/* Room Database - Database blue */
+.skill-item:hover .fa-database {
+    color: #2196F3 !important;
+}

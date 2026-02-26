@@ -1,0 +1,44 @@
+/* Global Shadow Overrides - Subtle & Professional */
+
+:root {
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
+    --shadow-md: 0 2px 4px -1px rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06) !important;
+    --shadow-lg: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+}
+
+/* Override Bootstrap Utility Classes */
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow {
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08) !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Specific Element Overrides */
+.portfolio .portfolio-item {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.portfolio .portfolio-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+.hero-image-wrapper img,
+.masthead .masthead-avatar img {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2)) !important;
+}
+
+/* Floating Stat Cards */
+.bg-white.text-slate-900.shadow-lg {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Form Focus */
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}

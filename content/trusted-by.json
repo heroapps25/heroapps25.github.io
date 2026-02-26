@@ -1,0 +1,25 @@
+{
+    "label": "Trusted by industry leaders",
+    "companies": [
+        {
+            "name": "Collabera",
+            "logo": "assets/img/collabera-logo.png"
+        },
+        {
+            "name": "GCash",
+            "logo": "assets/img/gcash-logo.png"
+        },
+        {
+            "name": "OANDA",
+            "logo": "assets/img/oanda-logo.png"
+        },
+        {
+            "name": "Modirum",
+            "logo": "assets/img/modirum-logo.png"
+        },
+        {
+            "name": "CWT",
+            "logo": "assets/img/cwt-logo.png"
+        }
+    ]
+}

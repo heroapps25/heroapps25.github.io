@@ -1,0 +1,21 @@
+{
+    "heading": "How We Help You Succeed",
+    "description": "We don't just write code, we build products that drive business value. With over a decade of experience in high-stakes industries, our team brings a strategic mindset to every project.",
+    "highlights": [
+        "Performance-First Mentality",
+        "Security & Data Integrity",
+        "User-Centric Design Thinking"
+    ],
+    "stats": [
+        {
+            "value": 4,
+            "suffix": "+",
+            "label": "Years of Excellence"
+        },
+        {
+            "value": 20,
+            "suffix": "+",
+            "label": "Apps Shipped"
+        }
+    ]
+}

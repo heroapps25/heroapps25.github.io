@@ -1,0 +1,143 @@
+{
+    "heading": "Portfolio",
+    "subheading": "Selected Projects & Professional Experience",
+    "projects": [
+        {
+            "id": "gcash",
+            "title": "GCash - Finance Super App",
+            "category": "Fintech & Payments",
+            "description": "GCash is an all-in-one mobile wallet that lets you send money, pay bills, shop, invest, borrow, and more—anytime, anywhere. Enjoy free GCash-to-GCash transfers, Send to Many, and fund transfers to banks and e-wallets like Maya, BPI, BDO, UnionBank, LandBank, Metrobank, and Chinabank, with saved details for faster future transactions. Buy load for all networks, access exclusive Globe and TM offers, and pay 400+ billers with options for reminders and recurring payments. Scan to Pay via QR at thousands of merchants locally and abroad, shop online securely, and link subscriptions directly to app stores. Eligible users can access credit options like GCredit, GLoan, GGives, and Borrow Load (loan products powered by Fuse Financing Inc., SEC-registered). Grow your money with GSave, GStocks, GFunds, and GCrypto, and stay protected with affordable insurance options. Cash in online or over the counter nationwide, and even help plant real trees by earning Green Energy points through transactions. GCash makes everyday financial tasks simple, secure, and accessible for Filipinos.",
+            "techStack": "Kotlin, Clean Architecture, MVVM, Retrofit, Room, Biometric Auth, Payment Security",
+            "cardImage": "assets/img/portfolio/gcashCard.png",
+            "hoverImage": "assets/img/portfolio/gcashHoverCard.png",
+            "gallery": [
+                "assets/img/portfolio/Gcash-GALLERY/Gcash/Screenshot_20260225_152750_GCash.png",
+                "assets/img/portfolio/Gcash-GALLERY/Gcash/Screenshot_20260225_152755_GCash.png",
+                "assets/img/portfolio/Gcash-GALLERY/Gcash/Screenshot_20260225_152816_GCash.png",
+                "assets/img/portfolio/Gcash-GALLERY/Gcash/Screenshot_20260225_152823_GCash.png",
+                "assets/img/portfolio/Gcash-GALLERY/Gcash/Screenshot_20260225_152835_GCash.png",
+                "assets/img/portfolio/Gcash-GALLERY/Gcash/Screenshot_20260225_152858_GCash.png"
+            ],
+            "bgColor": "#0056b3"
+        },
+        {
+            "id": "oanda",
+            "title": "OANDA - Global Trading",
+            "category": "Fintech & Trading",
+            "description": "A world-class trading platform for Forex and CFDs. Features real-time market data, advanced charting tools, and high-speed execution. Implemented complex data visualization and real-time WebSocket integrations for low-latency market updates.",
+            "techStack": "Kotlin, WebSockets, RxJava, Custom Charting, Real-time Networking, Material Design",
+            "cardImage": "assets/img/portfolio/oandaCard.png",
+            "hoverImage": "assets/img/portfolio/oandaHoverCard.png",
+            "bgColor": "#1a1a1a"
+        },
+        {
+            "id": "coinpass",
+            "title": "coinpass - Crypto Exchange",
+            "category": "Fintech & Cryptocurrency",
+            "description": "A leading UK-based cryptocurrency exchange for retail and institutional investors. Focused on high security, regulatory compliance, and a seamless interface for managing digital assets in a fast-moving market.",
+            "techStack": "Kotlin, Coroutines, Dagger Hilt, Biometric Security, KYC Integration, Secure Data Storage",
+            "cardImage": "assets/img/portfolio/coinpassCard.png",
+            "hoverImage": "assets/img/portfolio/coinpassHoverCard.png",
+            "bgColor": "#0d1117"
+        },
+        {
+            "id": "mycwt",
+            "title": "myCWT - Business Travel",
+            "category": "Travel & Logistics",
+            "description": "The essential travel companion for business travelers worldwide. Features flight and hotel bookings, real-time itinerary updates, and 24/7 support. Streamlined travel management for global organizations through a user-centric mobile interface.",
+            "techStack": "Kotlin, Jetpack Compose, Google Maps API, Push Notifications, Offline Sync, Internationalization",
+            "cardImage": "assets/img/portfolio/mycwtCard.png",
+            "hoverImage": "assets/img/portfolio/mycwtHoverCard.png",
+            "bgColor": "#1a3232"
+        },
+        {
+            "id": "modirum",
+            "title": "Modirum ID & Authentication",
+            "category": "Fintech & Security",
+            "description": "Advanced payment security and strong customer authentication (SCA). Developed the 3-D Secure 2.0 SDK and authentication app used by banks globally to prevent fraud and ensure secure digital payments during high-risk transactions.",
+            "techStack": "Security Hardening, Cryptography, SDK Development, JWS/JWE, Biometric Auth, ISO 20022",
+            "cardImage": "assets/img/portfolio/modriumCard.png",
+            "hoverImage": "assets/img/portfolio/modriumHoverCard.png",
+            "bgColor": "#111827"
+        },
+        {
+            "id": "cse",
+            "title": "CIVIL SERVICE REVIEWER",
+            "category": "Education",
+            "description": "Civil Service Exam Reviewer is a comprehensive review app designed to help aspiring candidates prepare effectively for the Civil Service Exam (CSE). Covering both Sub-Professional and Professional levels, the app features a regularly updated question database, realistic practice tests, instant performance feedback, detailed analytics, and a helpful registration guide. With its user-friendly interface and expertly crafted review materials, it enables users to strengthen key areas, improve test-taking skills, and build confidence—making it a reliable companion for achieving success in the Civil Service Exam.",
+            "techStack": "Kotlin, Firebase, Room, Jetpack Compose, Google Ads, In-App Purchases",
+            "cardImage": "assets/img/portfolio/cseCard.png",
+            "hoverImage": "assets/img/portfolio/cseHoverCard.png",
+            "gallery": [
+                "assets/img/portfolio/cse-gallery/CSE/S1.png",
+                "assets/img/portfolio/cse-gallery/CSE/S2.png",
+                "assets/img/portfolio/cse-gallery/CSE/S3.png",
+                "assets/img/portfolio/cse-gallery/CSE/S4.png",
+                "assets/img/portfolio/cse-gallery/CSE/S5.png",
+                "assets/img/portfolio/cse-gallery/CSE/S6.png",
+                "assets/img/portfolio/cse-gallery/CSE/S7.png",
+                "assets/img/portfolio/cse-gallery/CSE/S8.png"
+            ],
+            "bgColor": "#1e1b4b"
+        },
+        {
+            "id": "periodic-table",
+            "title": "Play To Learn: Periodic Table",
+            "category": "Education",
+            "description": "Play To Learn: Periodic Table is an engaging educational app designed to make learning chemistry interactive, enjoyable, and easy to understand. Featuring a fully interactive periodic table, users can tap on each element to explore detailed information such as atomic number, symbol, atomic weight, electron configuration, properties, history, uses, and orbital diagrams. The app also includes 3D atomic structure visualization to better understand electron arrangements, along with fun and educational quizzes to reinforce learning. With its intuitive interface and visually appealing design, it’s perfect for students, educators, and science enthusiasts who want to study at their own pace. This initial release marks the beginning of more exciting updates and features to come, making it a growing companion for anyone eager to explore the wonders of chemistry.",
+            "techStack": "Kotlin, Maps SDK, QR Scanning, Payment Gateway, Real-time Tracking, Firebase",
+            "cardImage": "assets/img/portfolio/ptCard.png",
+            "hoverImage": "assets/img/portfolio/ptHoverCard.png",
+            "gallery": [
+                "assets/img/portfolio/Periodic Table-GALLERY/Periodic Table/1000016271.png",
+                "assets/img/portfolio/Periodic Table-GALLERY/Periodic Table/1000016273.png",
+                "assets/img/portfolio/Periodic Table-GALLERY/Periodic Table/1000016281.png",
+                "assets/img/portfolio/Periodic Table-GALLERY/Periodic Table/1000016283.png",
+                "assets/img/portfolio/Periodic Table-GALLERY/Periodic Table/1000016285.png",
+                "assets/img/portfolio/Periodic Table-GALLERY/Periodic Table/1000016287.png",
+                "assets/img/portfolio/Periodic Table-GALLERY/Periodic Table/1000016289.png"
+            ],
+            "bgColor": "#ff6b00"
+        },
+        {
+            "id": "mlbb",
+            "title": "MLBB Game Guide",
+            "category": "Gaming & Social",
+            "description": "MLBB Game Guide is a comprehensive companion app designed to help players improve their gameplay and strategy in Mobile Legends: Bang Bang. It provides detailed hero information, item builds, emblems, battle spells, rankings, tier lists, and drafting strategies—all in one convenient platform. With organized and easy-to-navigate data, users can explore hero stats and roles, compare items, learn optimal emblem and spell usage, track the current meta, and even simulate team drafts to practice compositions and counters. Regularly updated for accuracy and relevance, the app offers a simple, user-friendly experience for players of all skill levels.",
+            "techStack": "Interactive UI, Lottie Animations, API Integration, Social Features, Real-time Stats",
+            "cardImage": "assets/img/portfolio/mlbbCard.png",
+            "hoverImage": "assets/img/portfolio/mlbbHoverCard.png",
+            "gallery": [
+                "assets/img/portfolio/MLBB-GALLERY/MLBB/MLBB1.png",
+                "assets/img/portfolio/MLBB-GALLERY/MLBB/MLBB2.png",
+                "assets/img/portfolio/MLBB-GALLERY/MLBB/MLBB3.png",
+                "assets/img/portfolio/MLBB-GALLERY/MLBB/MLBB4.png",
+                "assets/img/portfolio/MLBB-GALLERY/MLBB/MLBB5.png",
+                "assets/img/portfolio/MLBB-GALLERY/MLBB/MLBB6.png",
+                "assets/img/portfolio/MLBB-GALLERY/MLBB/MLBB7.png",
+                "assets/img/portfolio/MLBB-GALLERY/MLBB/MLBB8.png"
+            ],
+            "bgColor": "#2a1a32"
+        },
+        {
+            "id": "lto",
+            "title": "Ultimate LTO Exam Reviewer",
+            "category": "Education",
+            "description": "Ultimate LTO Exam Reviewer is a comprehensive review app designed to help aspiring candidates prepare effectively for the Land Transportation Office (LTO) Exam. Covering both theoretical and practical driving knowledge, the app features a regularly updated question database, realistic practice tests, instant performance feedback, detailed analytics, and helpful resources for license application and renewal. With its user-friendly interface and expertly crafted review materials, it enables users to strengthen key areas, improve test-taking skills, and build confidence—making it a reliable companion for achieving success in the LTO Exam.",
+            "techStack": "Kotlin, Firebase, Room, Jetpack Compose, Google Ads, In-App Purchases",
+            "cardImage": "assets/img/portfolio/ltoCard.png",
+            "hoverImage": "assets/img/portfolio/ltoHoverCard.png",
+            "gallery": [
+                "assets/img/portfolio/LTO-GALLERY/LTO/1000016291.png",
+                "assets/img/portfolio/LTO-GALLERY/LTO/1000016293.png",
+                "assets/img/portfolio/LTO-GALLERY/LTO/1000016295.png",
+                "assets/img/portfolio/LTO-GALLERY/LTO/1000016297.png",
+                "assets/img/portfolio/LTO-GALLERY/LTO/1000016299.png",
+                "assets/img/portfolio/LTO-GALLERY/LTO/1000016301.png",
+                "assets/img/portfolio/LTO-GALLERY/LTO/1000016303.png",
+                "assets/img/portfolio/LTO-GALLERY/LTO/1000016305.png"
+            ],
+            "bgColor": "#2a1a32"
+        }
+    ]
+}

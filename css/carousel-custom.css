@@ -1,0 +1,72 @@
+/* Testimonial Carousel indicators */
+.testimonial-carousel .carousel-indicators {
+    bottom: -50px;
+    margin-bottom: 0;
+}
+
+.testimonial-carousel .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--slate-600);
+    border: none;
+    opacity: 0.5;
+    transition: all 0.3s var(--ease-expo-out);
+    margin: 0 5px;
+}
+
+.testimonial-carousel .carousel-indicators .active {
+    width: 24px;
+    border-radius: 4px;
+    background-color: var(--primary-600);
+    opacity: 1;
+}
+
+/* Ensure testimonials have enough space for indicators */
+#about-testimonial-container {
+    margin-bottom: 40px;
+}
+
+/* Smooth fade transition for carousel */
+.testimonial-carousel.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-duration: 0.8s;
+    transition-property: opacity;
+}
+
+.testimonial-carousel.carousel-fade .carousel-item.active,
+.testimonial-carousel.carousel-fade .carousel-item-next.carousel-item-start,
+.testimonial-carousel.carousel-fade .carousel-item-prev.carousel-item-end {
+    opacity: 1;
+}
+
+.testimonial-carousel.carousel-fade .active.carousel-item-start,
+.testimonial-carousel.carousel-fade .active.carousel-item-end {
+    opacity: 0;
+}
+
+/* Fix jumping/stretching UI */
+.testimonial-carousel .carousel-inner {
+    min-height: 180px;
+    /* Adjust based on longest testimonial */
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-carousel .carousel-item {
+    height: 100%;
+}
+
+.testimonial-carousel .carousel-item>div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .testimonial-carousel .carousel-inner {
+        min-height: 240px;
+        /* More height for wrapped text on mobile */
+    }
+}

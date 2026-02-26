@@ -1,0 +1,10 @@
+  #mainNav .navbar-nav li.nav-item a.nav-link:active,
+  #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+      color: #4880ff !important;
+      outline: 2px solid #4880ff;
+      outline-offset: -2px;
+  }
+
+  #mainNav .navbar-nav li.nav-item a.nav-link.active {
+      color: #4880ff !important;
+  }

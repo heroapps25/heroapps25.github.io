@@ -1,0 +1,80 @@
+{
+    "heading": {
+        "main": "Let's Build Something ",
+        "highlight": "Exceptional"
+    },
+    "description": "Ready to scale your mobile presence or need a technical partner for your next project? We're currently accepting new client inquiries.",
+    "calendarLink": "https://calendar.app.google/9X8XbB5kLjJcBm8j7",
+    "formspreeId": "xaqdepog",
+    "socialLinks": [
+        {
+            "platform": "GitHub",
+            "icon": "fab fa-github",
+            "url": "https://github.com/HeroAppsDev"
+        },
+        {
+            "platform": "LinkedIn",
+            "icon": "fab fa-linkedin",
+            "url": "https://www.linkedin.com/company/heroapps-software-development-services/"
+        },
+        {
+            "platform": "Facebook",
+            "icon": "fab fa-facebook",
+            "url": "https://www.facebook.com/heroapps.softwaredevelopmentservices"
+        }
+    ],
+    "formFields": [
+        {
+            "id": "name",
+            "label": "Full Name",
+            "type": "text",
+            "placeholder": "John Doe",
+            "required": true
+        },
+        {
+            "id": "email",
+            "label": "Email Address",
+            "type": "email",
+            "placeholder": "john@example.com",
+            "required": true
+        },
+        {
+            "id": "message",
+            "label": "Project Details",
+            "type": "textarea",
+            "placeholder": "Tell us about your project...",
+            "rows": 4,
+            "required": true
+        }
+    ],
+    "messages": {
+        "success": {
+            "title": "Message sent successfully!",
+            "description": "Our team will get back to you as soon as possible."
+        },
+        "error": {
+            "title": "Error sending message!",
+            "description": "Please try again or contact us directly via LinkedIn."
+        }
+    },
+    "footerBranding": {
+        "name": "HeroApps",
+        "highlight": ".",
+        "description": "A specialized software development studio crafting high-performance, secure, and user-centric mobile applications.",
+        "copyright": "Copyright 2026 HeroApps Software Development Services. All rights reserved."
+    },
+    "footerNavLinks": [
+        {
+            "label": "Expertise",
+            "href": "#expertise"
+        },
+        {
+            "label": "Portfolio",
+            "href": "#portfolio"
+        },
+        {
+            "label": "Contact",
+            "href": "#contact"
+        }
+    ]
+}

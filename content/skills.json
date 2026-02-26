@@ -1,0 +1,101 @@
+{
+    "heading": "Core Expertise",
+    "subheading": "Specializing in high-performance Android development with a focus on scalability, maintainability, and exceptional user experience.",
+    "pillars": [
+        {
+            "icon": "fas fa-layer-group",
+            "iconColor": "primary-600",
+            "title": "Architecture & Scalability",
+            "description": "Building robust foundations using Clean Architecture, MVVM, and MVI patterns to ensure long-term maintainability and testability."
+        },
+        {
+            "icon": "fas fa-paint-brush",
+            "iconColor": "info",
+            "title": "Modern UI/UX",
+            "description": "Crafting fluid, accessible, and modern interfaces with Jetpack Compose, ensuring a premium feel across all device sizes."
+        },
+        {
+            "icon": "fas fa-bolt",
+            "iconColor": "success",
+            "title": "Performance & Optimization",
+            "description": "Ensuring lightning-fast load times and smooth interactions through Coroutines, Flows, and efficient data handling."
+        }
+    ],
+    "techStack": {
+        "label": "Advanced Tech Stack",
+        "technologies": [
+            {
+                "name": "Kotlin",
+                "icon": "fas fa-k",
+                "color": "#7F52FF",
+                "glowColor": "rgba(127, 82, 255, 0.4)"
+            },
+            {
+                "name": "Jetpack Compose",
+                "icon": "fas fa-layer-group",
+                "color": "#4285F4",
+                "glowColor": "rgba(66, 133, 244, 0.4)"
+            },
+            {
+                "name": "Coroutines",
+                "icon": "fas fa-rotate",
+                "color": "#00BCD4",
+                "glowColor": "rgba(0, 188, 212, 0.4)"
+            },
+            {
+                "name": "Hilt / Dagger",
+                "icon": "fas fa-syringe",
+                "color": "#FF6B35",
+                "glowColor": "rgba(255, 107, 53, 0.4)"
+            },
+            {
+                "name": "Retrofit",
+                "icon": "fas fa-right-left",
+                "color": "#00ACC1",
+                "glowColor": "rgba(0, 172, 193, 0.4)"
+            },
+            {
+                "name": "Room DB",
+                "icon": "fas fa-database",
+                "color": "#2196F3",
+                "glowColor": "rgba(33, 150, 243, 0.4)"
+            },
+            {
+                "name": "UI Testing",
+                "icon": "fas fa-vial",
+                "color": "#4CAF50",
+                "glowColor": "rgba(76, 175, 80, 0.4)"
+            },
+            {
+                "name": "CI/CD",
+                "icon": "fas fa-infinity",
+                "color": "#FF9800",
+                "glowColor": "rgba(255, 152, 0, 0.4)"
+            },
+            {
+                "name": "Laravel",
+                "icon": "fab fa-laravel",
+                "color": "#FF2D20",
+                "glowColor": "rgba(255, 45, 32, 0.4)"
+            },
+            {
+                "name": "React",
+                "icon": "fab fa-react",
+                "color": "#61DAFB",
+                "glowColor": "rgba(97, 218, 251, 0.4)"
+            },
+            {
+                "name": "HTML5",
+                "icon": "fab fa-html5",
+                "color": "#E34F26",
+                "glowColor": "rgba(227, 79, 38, 0.4)"
+            },
+            {
+                "name": "CSS3",
+                "icon": "fab fa-css3-alt",
+                "color": "#1572B6",
+                "glowColor": "rgba(21, 114, 182, 0.4)"
+            }
+        ]
+    }
+}

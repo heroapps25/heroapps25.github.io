@@ -1,0 +1,94 @@
+<section class="page-section bg-slate-900" id="contact">
+
+    <div class="container section-content">
+        <div class="row">
+            <!-- Left Column: Contact Info & CTA -->
+            <div class="col-lg-5 mb-5 mb-lg-0 reveal-premium-up">
+                <h2 id="contact-heading" class="display-5 fw-bold mb-4 text-white premium-heading"></h2>
+                <p id="contact-description" class="lead text-slate-300 mb-5">
+                    Ready to scale your mobile presence or need a technical partner for your next project? I'm currently
+                    accepting new inquiries.
+                </p>
+
+                <div class="card p-4 glass-card mb-4" style="border-color: rgba(37, 99, 235, 0.2);">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary-900/30 text-primary-400 p-3 rounded-3 me-3">
+                            <i class="fas fa-calendar-check fa-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="h6 fw-bold mb-1 text-white">Book a Strategy Call</h4>
+                            <p class="small text-slate-400 mb-0">15-min discovery session</p>
+                        </div>
+                    </div>
+                    <a id="contact-calendar-link" href="https://calendar.app.google/GRjCtfo7b9g1dRdc7" target="_blank"
+                        class="btn btn-professional btn-professional-primary w-100">
+                        Schedule on Google Calendar
+                    </a>
+                </div>
+
+                <div id="contact-socials" class="d-flex gap-3">
+                    <a href="https://github.com/JpEchano" class="text-slate-500 hover-text-primary-400 fs-4">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/haroldcalayan/"
+                        class="text-slate-500 hover-text-primary-400 fs-4">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Contact Form -->
+            <div class="col-lg-6 offset-lg-1 reveal-premium-up">
+                <div class="card p-4 p-md-5 glass-card">
+                    <form id="contactForm">
+                        <!-- Name Input -->
+                        <div class="mb-4">
+                            <label for="name" class="form-label small fw-bold text-slate-300">Full Name</label>
+                            <input type="text" class="form-control bg-slate-900 border-slate-700 text-white p-3"
+                                id="name" name="name" placeholder="John Doe" required>
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="mb-4">
+                            <label for="email" class="form-label small fw-bold text-slate-300">Email Address</label>
+                            <input type="email" class="form-control bg-slate-900 border-slate-700 text-white p-3"
+                                id="email" name="email" placeholder="john@example.com" required>
+                            <div class="invalid-feedback text-danger small mt-1" style="display: none;">Email is
+                                required.</div>
+                            <div class="invalid-feedback text-danger small mt-1" style="display: none;">Please enter a
+                                valid email address.</div>
+                        </div>
+
+
+                        <!-- Message Input -->
+                        <div class="mb-4">
+                            <label for="message" class="form-label small fw-bold text-slate-300">Project Details</label>
+                            <textarea class="form-control bg-slate-900 border-slate-700 text-white p-3" id="message"
+                                name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submitButton"
+                            class="btn btn-professional btn-professional-primary w-100 py-3 disabled">
+                            Send Message <i class="fas fa-paper-plane ms-2"></i>
+                        </button>
+                    </form>
+
+                    <!-- Success message-->
+                    <div class="d-none mt-4 p-4 bg-success-900/20 border border-success-500/30 rounded-4 text-success text-center"
+                        id="submitSuccessMessage">
+                        <div class="h5 fw-bold mb-2">Message sent successfully!</div>
+                        <p class="mb-0 small opacity-90">I'll get back to you as soon as possible.</p>
+                    </div>
+
+                    <!-- Error message-->
+                    <div class="d-none mt-4 p-4 bg-danger-900/20 border border-danger-500/30 rounded-4 text-danger text-center"
+                        id="submitErrorMessage">
+                        <div class="h5 fw-bold mb-2">Error sending message!</div>
+                        <p class="mb-0 small opacity-90">Please try again or contact me directly via LinkedIn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

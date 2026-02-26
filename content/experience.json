@@ -1,0 +1,36 @@
+{
+    "heading": "How We Work",
+    "subheading": "A systematic, outcomes-driven approach to building world-class mobile applications.",
+    "steps": [
+        {
+            "number": "01",
+            "title": "Discovery",
+            "description": "Deep dive into your requirements, user needs, and business goals to define a clear, actionable roadmap.",
+            "color": "primary-600"
+        },
+        {
+            "number": "02",
+            "title": "Architecture",
+            "description": "Designing robust, scalable foundations using Clean Architecture and modern design patterns.",
+            "color": "primary-600"
+        },
+        {
+            "number": "03",
+            "title": "Build & Iterate",
+            "description": "Agile development with frequent updates, unit testing, and continuous integration.",
+            "color": "primary-600"
+        },
+        {
+            "number": "04",
+            "title": "Deliver",
+            "description": "Rigorous QA, performance optimization, and seamless deployment to the Play Store.",
+            "color": "primary-600"
+        },
+        {
+            "number": "05",
+            "title": "Maintain & Improve",
+            "description": "Continuous monitoring, bug fixes, and feature enhancements to ensure long-term app health and user satisfaction.",
+            "color": "primary-600"
+        }
+    ]
+}

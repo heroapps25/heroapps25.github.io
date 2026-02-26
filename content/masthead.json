@@ -1,0 +1,38 @@
+{
+  "badge": "Premium Software Development Services",
+  "title": {
+    "main": "We Build Scalable Android Apps for ",
+    "highlight": "Global Brands"
+  },
+  "description": "HeroApps is a specialized software development studio with 4+ years of experience crafting high-performance, secure, and user-centric mobile applications using Kotlin and Jetpack Compose.",
+  "buttons": [
+    {
+      "text": "View Our Work",
+      "icon": "fas fa-arrow-right",
+      "link": "#portfolio",
+      "style": "primary"
+    },
+    {
+      "text": "Book a Strategy Call",
+      "icon": "",
+      "link": "#contact",
+      "style": "outline"
+    }
+  ],
+  "profileImage": "assets/img/heroapps-official-logo_no_text-01.svg",
+  "profileAlt": "HeroApps - Android Development Studio",
+  "stats": [
+    {
+      "value": 4,
+      "suffix": "+",
+      "label": "Years of Excellence",
+      "position": "top-left"
+    },
+    {
+      "value": 20,
+      "suffix": "+",
+      "label": "Apps Shipped",
+      "position": "bottom-right"
+    }
+  ]
+}
