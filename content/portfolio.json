@@ -44,11 +44,19 @@
             "id": "coinpass",
             "title": "coinpass - Crypto Exchange",
             "category": "Fintech & Cryptocurrency",
-            "description": "A leading UK-based cryptocurrency exchange for retail and institutional investors. Focused on high security, regulatory compliance, and a seamless interface for managing digital assets in a fast-moving market.",
+            "description": "Buy, sell and trade crypto assets on the go with coinpass*, the all-in-one crypto investing platform for UK businesses. With our crypto trading app you can seamlessly buy, sell, and trade digital assets and manage your crypto portfolio in a fully secure environment. Invest with confidence, convenience and speed. Voted the best corporate cryptocurrency exchange platform at CityAM's prestigious CryptoAM Awards, we’re the trusted UK crypto exchange for corporate investors. Our tailored business crypto solutions provide the market access, investment instruments and enterprise-grade security that you need, all within one convenient, centralised platform. Personalise your coinpass corporate crypto account to suit your trading style and schedule. You can trade over 85+ different crypto trading pairs in GBP, EUR, USDC, USDT, BTC & ETH with new pairs added all the time.",
             "techStack": "Kotlin, Coroutines, Dagger Hilt, Biometric Security, KYC Integration, Secure Data Storage",
             "cardImage": "assets/img/portfolio/coinpassCard.png",
             "hoverImage": "assets/img/portfolio/coinpassHoverCard.png",
-            "bgColor": "#0d1117"
+            "bgColor": "#0d1117",
+            "gallery": [
+                "assets/img/portfolio/coinpass-GALLERY/coinpass-s1.webp",
+                "assets/img/portfolio/coinpass-GALLERY/coinpass-s2.webp",
+                "assets/img/portfolio/coinpass-GALLERY/coinpass-s3.webp",
+                "assets/img/portfolio/coinpass-GALLERY/coinpass-s4.webp",
+                "assets/img/portfolio/coinpass-GALLERY/coinpass-s5.webp",
+                "assets/img/portfolio/coinpass-GALLERY/coinpass-s6.webp"
+            ]
         },
         {
             "id": "mycwt",
@@ -58,7 +66,17 @@
             "techStack": "Kotlin, Jetpack Compose, Google Maps API, Push Notifications, Offline Sync, Internationalization",
             "cardImage": "assets/img/portfolio/mycwtCard.png",
             "hoverImage": "assets/img/portfolio/mycwtHoverCard.png",
-            "bgColor": "#1a3232"
+            "bgColor": "#1a3232",
+            "gallery": [
+                "assets/img/portfolio/myCWT-GALLERY/myCWT-s1.webp",
+                "assets/img/portfolio/myCWT-GALLERY/myCWT-s2.webp",
+                "assets/img/portfolio/myCWT-GALLERY/myCWT-s3.webp",
+                "assets/img/portfolio/myCWT-GALLERY/myCWT-s4.webp",
+                "assets/img/portfolio/myCWT-GALLERY/myCWT-s5.webp",
+                "assets/img/portfolio/myCWT-GALLERY/myCWT-s6.webp",
+                "assets/img/portfolio/myCWT-GALLERY/myCWT-s7.webp",
+                "assets/img/portfolio/myCWT-GALLERY/myCWT-s8.webp"
+            ]
         },
         {
             "id": "modirum",
@@ -68,7 +86,18 @@
             "techStack": "Security Hardening, Cryptography, SDK Development, JWS/JWE, Biometric Auth, ISO 20022",
             "cardImage": "assets/img/portfolio/modriumCard.png",
             "hoverImage": "assets/img/portfolio/modriumHoverCard.png",
-            "bgColor": "#111827"
+            "bgColor": "#111827",
+            "gallery": [
+                "assets/img/portfolio/modirum-GALLERY/modirum-s1.webp",
+                "assets/img/portfolio/modirum-GALLERY/modirum-s2.webp",
+                "assets/img/portfolio/modirum-GALLERY/modirum-s3.webp",
+                "assets/img/portfolio/modirum-GALLERY/modirum-s4.webp",
+                "assets/img/portfolio/modirum-GALLERY/modirum-s5.webp",
+                "assets/img/portfolio/modirum-GALLERY/modirum-s6.webp",
+                "assets/img/portfolio/modirum-GALLERY/modirum-s7.webp",
+                "assets/img/portfolio/modirum-GALLERY/modirum-s8.webp",
+                "assets/img/portfolio/modirum-GALLERY/modirum-s9.webp"
+            ]
         },
         {
             "id": "cse",
