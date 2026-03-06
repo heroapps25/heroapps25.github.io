@@ -2,15 +2,40 @@
 .trusted-section {
     position: relative;
     z-index: 5;
+    overflow: hidden;
+    /* Prevent horizontal scrollbars on body */
+}
+
+/* Wrapper to hide overflow and apply fade masks */
+.trusted-logos-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .trusted-logos-grid {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    /* Prevent wrapping so it stays on one line */
     align-items: center;
     gap: 3rem;
     padding: 1rem 0;
+    width: max-content;
+    /* Make the flex container as wide as its content */
+    margin: 0 auto;
+    --parent-width: 100vw;
+    /* Fallback */
+}
+
+/* Add the pingpong animation class that will be applied via JS if overflow exists */
+.pingpong-animate {
+    animation: pingpong 20s ease-in-out infinite alternate;
+}
+
+.trusted-logos-grid:hover {
+    animation-play-state: paused;
 }
 
 .trusted-logo-item {
@@ -18,9 +43,13 @@
     align-items: center;
     justify-content: center;
     height: 120px;
+    width: 200px;
+    /* Base width to ensure consistent sizing */
     max-width: 280px;
     transition: all 0.4s var(--ease-expo-out);
     opacity: 0.5;
+    flex-shrink: 0;
+    /* Important: prevent logos from squishing */
 }
 
 .trusted-logo-item:hover {
@@ -34,6 +63,20 @@
     object-fit: contain;
 }
 
+@keyframes pingpong {
+
+    0%,
+    5% {
+        transform: translateX(0);
+    }
+
+    95%,
+    100% {
+        /* Move left by the full width of the items, minus the visible width of the parent container */
+        transform: translateX(calc(-100% + var(--parent-width)));
+    }
+}
+
 @media (max-width: 768px) {
     .trusted-logos-grid {
         gap: 2rem;
@@ -41,6 +84,7 @@
 
     .trusted-logo-item {
         height: 60px;
+        width: 120px;
         max-width: 140px;
     }
 }
