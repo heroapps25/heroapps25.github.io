@@ -5,6 +5,7 @@ const ContentLoader = {
             this.loadMasthead(),
             this.loadTrustedBy(),
             this.loadAbout(),
+            this.loadTeam(),
             this.loadPortfolio(),
             this.loadSkills(),
             this.loadExperience(),
@@ -170,6 +171,35 @@ const ContentLoader = {
                     </div>
                 `;
             }).join('');
+
+            // Setup pingpong scroll effect based on overflow
+            const wrapper = container.parentElement;
+            wrapper.classList.add('trusted-logos-wrapper');
+
+            const updatePingPong = () => {
+                const parentWidth = wrapper.offsetWidth;
+                const scrollWidth = container.scrollWidth;
+
+                // Only animate if the logos are wider than the container
+                if (scrollWidth > parentWidth) {
+                    container.classList.add('pingpong-animate');
+                    container.style.margin = '0';
+                    container.style.setProperty('--parent-width', `${parentWidth}px`);
+
+                    // Adjust animation duration based on overflow distance for consistent speed
+                    const distance = scrollWidth - parentWidth;
+                    const duration = Math.max(15, distance / 40); // Base duration, max speed 40px/s
+                    container.style.animationDuration = `${duration}s`;
+                } else {
+                    container.classList.remove('pingpong-animate');
+                    container.style.margin = '0 auto';
+                    container.style.transform = 'none';
+                }
+            };
+
+            // Wait for images to load before computing widths
+            setTimeout(updatePingPong, 500);
+            window.addEventListener('resize', updatePingPong);
         }
     },
 
@@ -280,6 +310,70 @@ const ContentLoader = {
                     </div>
                 `;
             }
+        }
+    },
+
+    async loadTeam() {
+        const data = await this.fetchJSON('team.json');
+        if (!data) return;
+
+        this.setText('team-heading', data.heading);
+
+        // Load Categories/Filters
+        const filtersContainer = document.getElementById('team-filters');
+        if (filtersContainer && data.categories) {
+            filtersContainer.innerHTML = data.categories.map((category, index) => {
+                // Keep the first category active by default, or you can make 'ALL' active
+                const isActive = category === 'ALL' ? 'active' : '';
+                return `<button class="team-filter-btn ${isActive}" data-filter="${category}">${category}</button>`;
+            }).join('');
+        }
+
+        // Load Members
+        const gridContainer = document.getElementById('team-grid');
+        if (gridContainer && data.members) {
+            gridContainer.innerHTML = data.members.map(member => `
+                <div class="col-sm-6 col-md-4 col-lg-3 team-card show" data-category="${member.category}">
+                    <div class="team-card-image-wrapper">
+                        <div class="team-card-image-inner">
+                            <img src="${member.image}" alt="${member.name}" class="team-card-image" />
+                        </div>
+                    </div>
+                    <h3 class="team-card-name">${member.name}</h3>
+                    <span class="team-card-role">${member.role}</span>
+                </div>
+            `).join('');
+
+            // Add filter functionality
+            const filterBtns = document.querySelectorAll('.team-filter-btn');
+            const teamCards = document.querySelectorAll('.team-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active from all
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active to clicked
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    teamCards.forEach(card => {
+                        card.classList.remove('show');
+
+                        // Use a timeout to allow the exit animation if we add one, or just hide
+                        setTimeout(() => {
+                            if (filterValue === 'ALL' || card.getAttribute('data-category') === filterValue) {
+                                card.classList.remove('hidden');
+                                // Force reflow
+                                void card.offsetWidth;
+                                card.classList.add('show');
+                            } else {
+                                card.classList.add('hidden');
+                            }
+                        }, 50); // slight delay for visual effect
+                    });
+                });
+            });
         }
     },
 

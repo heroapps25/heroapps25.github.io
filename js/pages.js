@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { file: 'header.html', containerId: 'header-container' },
         { file: 'masthead.html', containerId: 'masthead-container' },
         { file: 'trusted-by.html', containerId: 'trusted-by-container' },
-        { file: 'about.html', containerId: 'about-container' },
         { file: 'experience.html', containerId: 'process-container' },
         { file: 'skills.html', containerId: 'expertise-container' },
         { file: 'portfolio.html', containerId: 'portfolio-container' },
+        { file: 'about.html', containerId: 'about-container' },
+        { file: 'team.html', containerId: 'team-container' },
         { file: 'contact.html', containerId: 'contact-container' },
         { file: 'footer.html', containerId: 'footer-container' }
     ];

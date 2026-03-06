@@ -1,0 +1,70 @@
+{
+    "heading": "Meet the team.",
+    "categories": [
+        "LEADERSHIP",
+        "CLIENT SERVICES",
+        "CREATIVE",
+        "DEVELOPMENT",
+        "MARKETING & SALES",
+        "STRATEGY",
+        "ALL"
+    ],
+    "members": [
+        {
+            "name": "Michelle Chu",
+            "role": "Director of Technology",
+            "category": "LEADERSHIP",
+            "image": "assets/img/team/default-avatar-1.jpg",
+            "country": "assets/img/flags/us.svg"
+        },
+        {
+            "name": "Phil Dupertuis",
+            "role": "Director of Client Services",
+            "category": "CLIENT SERVICES",
+            "image": "assets/img/team/default-avatar-2.jpg",
+            "country": "assets/img/flags/us.svg"
+        },
+        {
+            "name": "Maria Eades",
+            "role": "Director of People & Culture",
+            "category": "LEADERSHIP",
+            "image": "assets/img/team/default-avatar-3.jpg",
+            "country": "assets/img/flags/au.svg"
+        },
+        {
+            "name": "Tony Eades",
+            "role": "Chief Strategy Officer",
+            "category": "STRATEGY",
+            "image": "assets/img/team/default-avatar-4.jpg",
+            "country": "assets/img/flags/au.svg"
+        },
+        {
+            "name": "Jason Feller",
+            "role": "Business Unit Director",
+            "category": "LEADERSHIP",
+            "image": "assets/img/team/default-avatar-5.jpg",
+            "country": "assets/img/flags/us.svg"
+        },
+        {
+            "name": "David Smith",
+            "role": "Lead Developer",
+            "category": "DEVELOPMENT",
+            "image": "assets/img/team/default-avatar-6.jpg",
+            "country": "assets/img/flags/us.svg"
+        },
+        {
+            "name": "Sarah Jones",
+            "role": "Creative Director",
+            "category": "CREATIVE",
+            "image": "assets/img/team/default-avatar-7.jpg",
+            "country": "assets/img/flags/au.svg"
+        },
+        {
+            "name": "Emily Chen",
+            "role": "Marketing Specialist",
+            "category": "MARKETING & SALES",
+            "image": "assets/img/team/default-avatar-8.jpg",
+            "country": "assets/img/flags/us.svg"
+        }
+    ]
+}
