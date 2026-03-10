@@ -3,7 +3,7 @@
     "categories": [
         "ALL",
         "LEADERSHIP",
-        "MANAGEMENT",
+        "PROJECT MANAGEMENT",
         "ANDROID DEVELOPMENT",
         "FULLSTACK DEVELOPMENT",
         "DESIGN"
@@ -17,14 +17,14 @@
         },
         {
             "name": "Priscarl C. Montarye",
-            "role": "HR and Finance Manager",
+            "role": "Founder, HR & Finance Manager",
             "category": "LEADERSHIP",
             "image": "assets/img/the_team/priscarl_profile.png"
         },
         {
             "name": "Irish Panganiban",
             "role": "Project Manager",
-            "category": "MANAGEMENT",
+            "category": "PROJECT MANAGEMENT",
             "image": "assets/img/the_team/irish_no.png"
         },
         {
