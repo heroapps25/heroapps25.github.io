@@ -518,65 +518,49 @@ const ContentLoader = {
                 return;
             }
 
-            const padsHTML = techs.map((tech, i) => {
+            const cardsHTML = techs.map((tech, i) => {
                 const name = typeof tech === 'string' ? tech : tech.name;
-                const icon = typeof tech === 'object' ? tech.icon : null;
+                const icon = typeof tech === 'object' ? (tech.devicon || tech.icon) : null;
                 const color = typeof tech === 'object' ? tech.color : '#4a90e2';
-                const glow = typeof tech === 'object' ? tech.glowColor : 'rgba(74,144,226,0.35)';
-                const delay = i * 0.05; // staggered animation
+                const url = typeof tech === 'object' && tech.url ? tech.url : null;
+                const delay = i * 0.05;
 
-                let iconHTML = '';
-                if (icon && (icon.startsWith('fas ') || icon.startsWith('far ') || icon.startsWith('fab ') || icon.startsWith('fa-'))) {
-                    iconHTML = `<i class="${icon} soundboard-pad-icon"></i>`;
+                // Icon badge HTML
+                let badgeIconHTML = '';
+                if (icon && icon.startsWith('devicon-')) {
+                    badgeIconHTML = `<i class="${icon}"></i>`;
+                } else if (icon && (icon.startsWith('fas ') || icon.startsWith('far ') || icon.startsWith('fab ') || icon.startsWith('fa-'))) {
+                    badgeIconHTML = `<i class="${icon}" style="color:${color};"></i>`;
                 } else {
-                    const letter = name.charAt(0).toUpperCase();
-                    iconHTML = `<span class="soundboard-pad-icon" style="font-size:1.4rem;font-weight:800;font-family:monospace;">${letter}</span>`;
+                    badgeIconHTML = `<span style="font-size:1rem;font-weight:800;font-family:monospace;color:${color};">${name.charAt(0).toUpperCase()}</span>`;
                 }
 
+                // Badge background — very subtle tint of the brand color
+                const badgeBg = typeof tech === 'object' && tech.glowColor
+                    ? tech.glowColor.replace(/[\d.]+\)$/, '0.15)')
+                    : 'rgba(74,144,226,0.15)';
+
                 return `
-                <div class="soundboard-pad tech-stack-item-animated" style="animation-delay: ${delay}s" data-color="${color}" data-glow="${glow}">
-                    <div class="soundboard-pad-face">
-                        <div class="soundboard-pad-stripe" style="background:${color};"></div>
-                        ${iconHTML}
-                        <span class="soundboard-pad-label">${name}</span>
+                <div class="tech-link-card tech-stack-item-animated" style="animation-delay:${delay}s">
+                    <div class="tech-link-card-badge" style="background:${badgeBg};">
+                        ${badgeIconHTML}
                     </div>
+                    <div class="tech-link-card-info">
+                        <span class="tech-link-card-name">${name}</span>
+                        ${url ? `<span class="tech-link-card-url">${url}</span>` : ''}
+                    </div>
+                    <i class="fas fa-chevron-right tech-link-card-chevron"></i>
                 </div>`;
             }).join('');
 
-            techContainer.innerHTML = `
-                <div class="d-flex flex-wrap justify-content-center gap-3 w-100 mt-4">
-                    ${padsHTML}
-                </div>
-            `;
-
-            // Re-bind hover events for new pads
-            techContainer.querySelectorAll('.soundboard-pad').forEach(pad => {
-                const color = pad.dataset.color;
-                const glow = pad.dataset.glow;
-                const face = pad.querySelector('.soundboard-pad-face');
-                const icon = pad.querySelector('.soundboard-pad-icon');
-
-                pad.addEventListener('mouseenter', () => {
-                    icon.style.color = color;
-                    icon.style.textShadow = `0 0 14px ${glow}, 0 0 30px ${glow}`;
-                    face.style.boxShadow = `
-                        0 12px 0 #0a0e18,
-                        0 16px 36px rgba(0,0,0,0.5),
-                        0 0 0 1px rgba(255,255,255,0.10),
-                        0 0 28px ${glow},
-                        inset 0 1px 0 rgba(255,255,255,0.10)
-                    `;
-                });
-                pad.addEventListener('mouseleave', () => {
-                    icon.style.color = '';
-                    icon.style.textShadow = '';
-                    face.style.boxShadow = '';
-                });
-            });
+            techContainer.innerHTML = `<div class="tech-link-grid w-100">${cardsHTML}</div>`;
         };
 
         if (layoutWrapper && pillarsContainer) {
             const pillarCards = pillarsContainer.querySelectorAll('.expertise-pillar-card');
+
+            // Store grid-mode height so we can restore it cleanly during reset
+            let storedGridHeight = 0;
 
             pillarCards.forEach(card => {
                 card.addEventListener('click', () => {
@@ -594,7 +578,12 @@ const ContentLoader = {
                     pillarCards.forEach(c => c.classList.remove('expertise-active'));
                     card.classList.add('expertise-active');
 
+                    // Capture grid height BEFORE switching — used later to prevent jump on reset
+                    storedGridHeight = layoutWrapper.offsetHeight;
+
                     // Switch layout to sidebar view
+                    layoutWrapper.style.height = '';
+                    layoutWrapper.style.minHeight = '';
                     layoutWrapper.classList.remove('skills-grid-view');
                     layoutWrapper.classList.add('skills-sidebar-view');
                     document.getElementById('skills-left-panel').classList.remove('grid-mode-panel');
@@ -606,40 +595,91 @@ const ContentLoader = {
                     // Render tech stack
                     renderTechStack(pillarData.techStack);
 
-                    // Scroll to the top of the section on mobile if needed
+                    // On mobile: show back button and scroll section into view
+                    const mobileBack = document.getElementById('skills-mobile-back');
                     if (window.innerWidth < 992) {
-                        layoutWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        if (mobileBack) mobileBack.classList.add('visible');
+                        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
                 });
             });
+
+            // Back button — returns to grid view on mobile
+            const mobileBack = document.getElementById('skills-mobile-back');
+            if (mobileBack) {
+                mobileBack.addEventListener('click', () => {
+                    layoutWrapper.classList.remove('skills-sidebar-view');
+                    layoutWrapper.classList.add('skills-grid-view');
+                    document.getElementById('skills-left-panel').classList.add('grid-mode-panel');
+                    techContainer.parentElement.classList.add('grid-mode-panel');
+                    pillarCards.forEach(c => c.classList.remove('expertise-active'));
+                    mobileBack.classList.remove('visible');
+                });
+            }
 
             // Revert layout to grid when the expertise section goes out of view
             if (section) {
                 const observerOptions = {
                     root: null,
-                    rootMargin: '-10% 0px -10% 0px', // Prevents triggering right on the edge
+                    rootMargin: '0px', // Fire exactly when it leaves the viewport
                     threshold: 0
                 };
 
                 const expertiseObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
-                        // Only trigger when scrolling away, and prevent layout jumps by wrapping in requestAnimationFrame
+                        // Desktop only — mobile uses the back button
+                        if (window.innerWidth < 992) return;
+
                         if (!entry.isIntersecting && layoutWrapper.classList.contains('skills-sidebar-view')) {
-                            // Check if the scroll has truly passed the section (bounding top is way off)
-                            // This stops the jitter when the height change immediately triggers another intersection
+                            const rect = entry.boundingClientRect;
+                            const vh = window.innerHeight || document.documentElement.clientHeight;
+
+                            // Determine if section is entirely above or entirely below the viewport
+                            // Added small 1px buffer for subpixel rounding issues
+                            const isAbove = rect.bottom <= 1;
+                            const isBelow = rect.top >= (vh - 1);
+
+                            // Only reset if it is completely out of view (user can't see the change)
+                            if (!isAbove && !isBelow) return;
+
                             requestAnimationFrame(() => {
-                                layoutWrapper.style.minHeight = layoutWrapper.offsetHeight + 'px'; // Lock height temporarily
+                                const leftPanel = document.getElementById('skills-left-panel');
+                                const rightPanel = techContainer.parentElement;
+
+                                // 1. Disable CSS transitions so the height changes instantly without sliding
+                                layoutWrapper.style.transition = 'none';
+                                leftPanel.style.transition = 'none';
+                                rightPanel.style.transition = 'none';
+
+                                // 2. Measure height before reset
+                                const heightBefore = layoutWrapper.offsetHeight;
+
+                                // 3. Snap back to grid layout classes
                                 layoutWrapper.classList.remove('skills-sidebar-view');
                                 layoutWrapper.classList.add('skills-grid-view');
-                                document.getElementById('skills-left-panel').classList.add('grid-mode-panel');
-                                techContainer.parentElement.classList.add('grid-mode-panel');
+                                leftPanel.classList.add('grid-mode-panel');
+                                rightPanel.classList.add('grid-mode-panel');
                                 pillarCards.forEach(c => c.classList.remove('expertise-active'));
 
-                                // Unlock height after transition finishes
-                                setTimeout(() => {
-                                    layoutWrapper.style.height = '';
-                                    layoutWrapper.style.minHeight = '';
-                                }, 500);
+                                // 4. Force browser reflow to get the new instant height
+                                void layoutWrapper.offsetHeight;
+                                const heightAfter = layoutWrapper.offsetHeight;
+
+                                // 5. If section is ABOVE us, the height change would push/pull our current scroll position.
+                                // Compensate for it instantly.
+                                if (isAbove) {
+                                    const delta = heightAfter - heightBefore;
+                                    if (delta !== 0) {
+                                        window.scrollBy({ top: delta, behavior: 'instant' });
+                                    }
+                                }
+
+                                // 6. Turn transitions back on in the next frame
+                                requestAnimationFrame(() => {
+                                    layoutWrapper.style.transition = '';
+                                    leftPanel.style.transition = '';
+                                    rightPanel.style.transition = '';
+                                });
                             });
                         }
                     });
@@ -647,6 +687,32 @@ const ContentLoader = {
 
                 expertiseObserver.observe(section);
             }
+
+            // Fix stale inline styles when viewport is resized
+            // (JS locks minHeight during transitions; resizing makes it stale)
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    // Always clear any locked height — CSS handles sizing
+                    layoutWrapper.style.height = '';
+                    layoutWrapper.style.minHeight = '';
+
+                    const isMobile = window.innerWidth < 992;
+                    const mobileBack = document.getElementById('skills-mobile-back');
+                    const inSidebar = layoutWrapper.classList.contains('skills-sidebar-view');
+
+                    if (inSidebar) {
+                        if (isMobile) {
+                            // On mobile: back button should be visible
+                            if (mobileBack) mobileBack.classList.add('visible');
+                        } else {
+                            // On desktop: hide back button — sidebar handles nav itself
+                            if (mobileBack) mobileBack.classList.remove('visible');
+                        }
+                    }
+                }, 150);
+            });
         }
     },
 
