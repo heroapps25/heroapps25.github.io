@@ -47,13 +47,11 @@
     /* Base width to ensure consistent sizing */
     max-width: 280px;
     transition: all 0.4s var(--ease-expo-out);
-    opacity: 0.5;
     flex-shrink: 0;
     /* Important: prevent logos from squishing */
 }
 
 .trusted-logo-item:hover {
-    opacity: 1;
     transform: scale(1.1);
 }
 
