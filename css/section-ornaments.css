@@ -12,7 +12,6 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
     border-radius: 1.5rem;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -20,7 +19,6 @@
 .glass-card:hover {
     transform: translateY(-8px);
     border-color: rgba(37, 99, 235, 0.3);
-    box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.5);
 }
 
 /* Disable hover lift and shadows on contact section containers */
