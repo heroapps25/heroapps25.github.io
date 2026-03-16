@@ -11,6 +11,8 @@
     position: relative;
     width: 100%;
     overflow: hidden;
+    padding-top: 15px;
+    /* Room for hover lift */
 }
 
 .skills-left-panel,
@@ -39,7 +41,6 @@
 .skills-sidebar-view.position-relative {
     gap: 0;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 /* ============================================================
