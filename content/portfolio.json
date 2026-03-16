@@ -400,6 +400,11 @@
             "cardImage": "assets/img/portfolio/Robotics_images/shield1.png",
             "hoverImage": "assets/img/portfolio/Robotics_images/shield_hover1.png",
             "gallery": [
+                "assets/img/portfolio/shield-gallery/shield_img1.jpg",
+                "assets/img/portfolio/shield-gallery/shield_img2.jpg",
+                "assets/img/portfolio/shield-gallery/shield_img3.jpg",
+                "assets/img/portfolio/shield-gallery/shield_img4.png",
+                "assets/img/portfolio/shield-gallery/shield_img5.png",
                 "assets/img/portfolio/videos/shiel print video.mp4"
             ],
             "bgColor": "#dc2626"
@@ -411,10 +416,11 @@
             "serviceCategory": "App & Web Designs",
             "description": "A modern and user-friendly web interface designed for a car rental platform. The design focuses on clear navigation, intuitive booking flow, and visually organized vehicle listings to improve the user experience for customers and administrators.<br><br><b>Design Features:</b><ul><li>Clean and modern dashboard layout</li><li>Vehicle listing interface with card-based design</li><li>Booking and reservation UI flow</li><li>Admin dashboard UI for managing vehicles and transactions</li><li>Organized navigation and responsive layout</li><li>Consistent color scheme and typography</li><li>User-friendly forms and interaction elements</li></ul>",
             "techStack": "Figma, UI/UX Design, Web Design, Wireframing, Prototyping",
-            "cardImage": "",
-            "hoverImage": "",
+            "cardImage": "assets/img/portfolio/design/car_rental9.png",
+            "hoverImage": "assets/img/portfolio/design/car_rental_hover0.png",
             "gallery": [
-                "assets/img/portfolio/design/car_rental.png"
+                "assets/img/portfolio/design/car_rental1.png",
+                "assets/img/portfolio/design/car_rental2.png"
             ],
             "bgColor": "#3b82f6"
         },
@@ -425,10 +431,25 @@
             "serviceCategory": "App & Web Designs",
             "description": "A mobile UI design created for a game guide application for players of League of Legends. The design focuses on easy navigation, organized champion information, and visually engaging layouts for builds and guides.<br><br><b>Design Features:</b><ul><li>Champion list and browsing interface</li><li>Champion detail pages with builds and strategies</li><li>Clean card-based content layout</li><li>Easy navigation between guides and sections</li><li>Game-themed UI style and color palette</li><li>Mobile-friendly layout and readability</li></ul>",
             "techStack": "Figma, Mobile App Design, UI/UX Design, Wireframing, Game Interface",
-            "cardImage": "",
-            "hoverImage": "",
+            "cardImage": "assets/img/portfolio/design/lol_guide.png",
+            "hoverImage": "assets/img/portfolio/design/lol_guide2.png",
             "gallery": [
-                "assets/img/portfolio/design/lol_guide.png"
+                "assets/img/portfolio/design/lol_guide.png",
+                "assets/img/portfolio/design/lol_guide2.png"
+            ],
+            "bgColor": "#eab308"
+        },
+        {
+            "id": "thesis-idea-generator",
+            "title": "Thesis Idea Generator",
+            "category": "App & Web Designs",
+            "serviceCategory": "App & Web Designs",
+            "description": "A mobile UI design created for a game guide application for players of League of Legends. The design focuses on easy navigation, organized champion information, and visually engaging layouts for builds and guides.<br><br><b>Design Features:</b><ul><li>Champion list and browsing interface</li><li>Champion detail pages with builds and strategies</li><li>Clean card-based content layout</li><li>Easy navigation between guides and sections</li><li>Game-themed UI style and color palette</li><li>Mobile-friendly layout and readability</li></ul>",
+            "techStack": "Figma, Mobile App Design, UI/UX Design, Wireframing, Game Interface",
+            "cardImage": "assets/img/portfolio/design/thesis_idea_gen.png",
+            "hoverImage": "assets/img/portfolio/design/thesis_idea_gen_hover.png",
+            "gallery": [
+                "assets/img/portfolio/design/thesis_idea_display.png"
             ],
             "bgColor": "#eab308"
         }
