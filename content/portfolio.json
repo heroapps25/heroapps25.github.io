@@ -480,6 +480,66 @@
                 "assets/img/portfolio/design/ph_investment_design.png"
             ],
             "bgColor": "#0f172a"
+        },
+        {
+            "id": "phtech-logo",
+            "title": "PHTech Electronic Shop",
+            "category": "Graphics, 3D & Animations",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "A professional logo design for an electronic products shop. The design features a wrench symbolizing tools for building, a circuit-like structure representing the electronics industry, and a centralized 'PHT' anagram representing the business name.",
+            "techStack": "Visual Design, Branding, Logo Design, Vector Art",
+            "cardImage": "assets/img/portfolio/design/LOGO_DESIGNS/phtech_logo.png",
+            "hoverImage": "assets/img/portfolio/design/LOGO_DESIGNS/phtech_logo_hover.png",
+            "gallery": [
+                "assets/img/portfolio/design/LOGO_DESIGNS/PHT_LOGO_EXP.png"
+            ],
+            "bgColor": "#17488a"
+        },
+        {
+            "id": "let-logo",
+            "title": "LET Reviewer App",
+            "category": "Graphics, 3D & Animations",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "An educational logo design inspired by the LPT badge. The design incorporates a torch for enlightenment, a book for knowledge, and a bookmark for progress tracking—all encased in a badge shape representing professional achievement.",
+            "techStack": "Visual Design, Branding, Logo Design, Educational UI",
+            "cardImage": "assets/img/portfolio/design/LOGO_DESIGNS/let_logo.png",
+            "hoverImage": "assets/img/portfolio/design/LOGO_DESIGNS/let_logo_hover.png",
+            "gallery": [
+                "assets/img/portfolio/design/LOGO_DESIGNS/LET_LOGO_EXP.png"
+            ],
+            "bgColor": "#0c468c"
+        },
+        {
+            "id": "inventrix-logo",
+            "title": "Inventrix Engineering",
+            "category": "Graphics, 3D & Animations",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "A modern logo design blending traditional engineering with digital innovation. The concept features a gear as a foundation, a light bulb shaped like a wrench to symbolize problem-solving innovation, and circuit-like hands representing a helping hand through technology.",
+            "techStack": "Visual Design, Branding, Engineering Consultancy Design",
+            "cardImage": "assets/img/portfolio/design/LOGO_DESIGNS/inventrix_logo.png",
+            "hoverImage": "assets/img/portfolio/design/LOGO_DESIGNS/inventrix_logo_hover.png",
+            "gallery": [
+                "assets/img/portfolio/design/LOGO_DESIGNS/INVENTRIX_LOGO_EXP.png"
+            ],
+            "bgColor": "#0c468c"
+        },
+        {
+            "id": "phtech-kit-showcase",
+            "title": "PHTECH Kit Showcase",
+            "category": "Robotics & Embedded Systems",
+            "serviceCategory": "Robotics & Embedded Systems",
+            "description": "\n<div style=\"font-size: 0.9rem; line-height: 1.5;\">\n    <h4 style=\"color: #63b3ed; border-bottom: 1px solid #2d3748; padding-bottom: 0.3rem; margin-bottom: 0.8rem;\">1. Electronics Starter Mini Kit</h4>\n    <div style=\"margin-bottom: 1.2rem;\">\n        <strong>Container:</strong> Smallest Yellow (Arduino-size) | <strong>Docs:</strong> Resistance Card<br>\n        <strong>Components:</strong> 200pcs Resistors (10R to 1M), 6pcs Tact switch w/ caps (Multi-color), 2pcs Potentiometer (1K, 1M), 25pcs LEDs, 2pcs Pin header 40 pins.\n    </div>\n\n    <h4 style=\"color: #63b3ed; border-bottom: 1px solid #2d3748; padding-bottom: 0.3rem; margin-bottom: 0.8rem;\">2. Electronics Starter Kit</h4>\n    <div style=\"margin-bottom: 1.2rem;\">\n        <strong>Container:</strong> S500 Blue | <strong>Docs:</strong> Resistance Card<br>\n        <strong>Core:</strong> Breadboard 400, 200pcs Resistors, 50pcs LEDs (10ea), 6pcs Tact switches w/ caps, 2pcs Potentiometer (1K, 1M), 2pcs Pin header 40 pins, 2pcs LDR, 1pc Thermistor.<br>\n        <strong>Sensors/ICs:</strong> IC 4N35, IC 74HC595, IR Trans/Rec, 2pcs Buzzer (Act/Pas), 5pcs Diode 1N4007, 5pcs Transistor PN2222, 20pcs Ceramic Cap, 10pcs Push buttons.\n    </div>\n\n    <h4 style=\"color: #63b3ed; border-bottom: 1px solid #2d3748; padding-bottom: 0.3rem; margin-bottom: 0.8rem;\">3. Electronics Super Starter Kit</h4>\n    <div style=\"margin-bottom: 1.2rem;\">\n        <strong>Container:</strong> R1250 Green | <strong>Docs:</strong> Resistance Card<br>\n        <strong>Wiring:</strong> 140pcs Solderless Jumpers, 65pcs Jumpers, 20pcs Dupont F-M.<br>\n        <strong>Core:</strong> Breadboard 830, Power supply, 200pcs Resistors, 50pcs LEDs, 6pcs Tact switches, 2pcs Potentiometer (1K, 1M), 2pcs Pin header, 2pcs LDR, 1pc Thermistor, 5pcs Diode 1N4007, 5pcs Transistor PN2222, IC 4N35, IC 74HC595, IR Trans/Rec, 2pcs Buzzer, 20pcs Ceramic Cap, 10pcs Push buttons.<br>\n        <strong>Advanced Extras:</strong> 10pcs Electrolytic Cap, 12pcs Tact switches w/ caps, 2pcs Potentiometer (1K, 10K), 7-segment (1 & 4 digit), 2pcs Buzzer, 5V Relay, 25pcs LEDs, RGB LED, SW-520D Tilt sensor, ICs (74HC595, L293D), 10pcs Transistors (PN2222, S8050), 5pcs Diodes, 10pcs Ceramic Cap, 4pcs Electrolytic Cap, 5pcs Push buttons.\n    </div>\n\n    <h4 style=\"color: #63b3ed; border-bottom: 1px solid #2d3748; padding-bottom: 0.3rem; margin-bottom: 0.8rem;\">4. Arduino Uno R3 Starter Mini Kit</h4>\n    <div style=\"margin-bottom: 1.2rem;\">\n        <strong>Container:</strong> R750 Yellow | <strong>Core:</strong> Arduino Uno R3, Breadboard 400, 10pcs Dupont M-M.<br>\n        <strong>Sensors:</strong> Proximity, Soil humidity, Sound, Water level, DHT11, 2pcs LDR, SW-520D Tilt sensor, 1-digit 7-segment, RGB LED, 2pcs Buzzer, 30pcs Resistors, 6pcs Tact switches, Potentiometer (10K), 15pcs LEDs.\n    </div>\n\n    <h4 style=\"color: #63b3ed; border-bottom: 1px solid #2d3748; padding-bottom: 0.3rem; margin-bottom: 0.8rem;\">5. Arduino Uno R3 Starter Kit</h4>\n    <div style=\"margin-bottom: 1.2rem;\">\n        <strong>Container:</strong> R1250 Blue | <strong>Core:</strong> Arduino Uno R3, Breadboard 830, 10pcs Dupont M-M, 9V Battery connector.<br>\n        <strong>Modules:</strong> LCD, Joystick, Ultrasonic, 3V DC motor w/ fan.<br>\n        <strong>Sensors:</strong> Proximity, Soil humidity, Sound, Water level, DHT11, 2pcs LDR, SW-520D Tilt sensor, RGB LED, 2pcs Buzzer, 1-digit 7-segment, 30pcs Resistors, 6pcs Tact switches, Potentiometer (10K), 15pcs LEDs.\n    </div>\n\n    <h4 style=\"color: #63b3ed; border-bottom: 1px solid #2d3748; padding-bottom: 0.3rem; margin-bottom: 0.8rem;\">6. Arduino Uno R3 Ultimate Kit</h4>\n    <div style=\"margin-bottom: 1.2rem;\">\n        <strong>Container:</strong> S2200 | <strong>Power:</strong> 9V 1A Adapter, 9V Battery connector, Power supply module.<br>\n        <strong>Core:</strong> Arduino Uno R3, Breadboard 830, Prototype Expansion, 65pcs Jumpers, 40pcs Dupont (20 MM, 20 FM).<br>\n        <strong>Specialized Modules:</strong> Dot Matrix MAX7219, LCD, RFID RC522, RTC, Rotary Encoder, Acceleration/Gyro GY-521, PIR Motion HC-SR501, 16 Keypad, Remote w/ IR, IR Receiver.<br>\n        <strong>Motors:</strong> Stepper w/ ULN2003, Servo SG90, 3V Servo, 3V DC motor w/ fan.<br>\n        <strong>Sensors:</strong> Proximity, Soil humidity, Sound, Water level, DHT11, Joystick, Ultrasonic, Resistors (100pcs).\n    </div>\n\n    <h4 style=\"color: #63b3ed; border-bottom: 1px solid #2d3748; padding-bottom: 0.3rem; margin-bottom: 0.8rem;\">7. Arduino Uno R3 Super Starter Kit</h4>\n    <div style=\"margin-bottom: 0.8rem;\">\n        <strong>Container:</strong> S2200 Green | <strong>Core:</strong> Arduino Uno R3, Breadboard 830, Prototype Expansion, 16 Keypad, 65pcs Jumpers, 10pcs Dupont MM, 9V Battery connector, Power supply module.<br>\n        <strong>Modules/Motors:</strong> Stepper w/ ULN2003, Servo SG90, 3V DC motor w/ fan, Remote w/ IR, LCD, Joystick, Ultrasonic.<br>\n        <strong>Sensors & Components:</strong> Proximity, Soil humidity, Sound, Water level, DHT11, 2pcs LDR, SW-520D Tilt sensor, 7-segment (1 & 4 digit), 2pcs Buzzer, Potentiometer (10K), 30pcs Resistors, 12pcs Tact switches, 15pcs LEDs, RGB LED, ICs (74HC595, L293D), Thermistor, Transistors, Diodes.\n    </div>\n</div>\n",
+            "techStack": "Arduino, Robotics, Sensors, IoT, STEM Education",
+            "cardImage": "assets/img/portfolio/design/phtech_showcase.png",
+            "hoverImage": "assets/img/portfolio/design/phtech_showcase_hover.png",
+            "gallery": [
+                "assets/img/portfolio/design/Arduino Uno R3 Ultimate.png",
+                "assets/img/portfolio/design/SUPER STARTER KIT.png",
+                "assets/img/portfolio/design/ESSK.png",
+                "assets/img/portfolio/design/ESMK.png",
+                "assets/img/portfolio/design/ESK.png"
+            ],
+            "bgColor": "#0c468c"
         }
     ]
 }
