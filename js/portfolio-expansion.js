@@ -20,6 +20,8 @@ class PortfolioExpansion {
         this.isHovering = false;
         this.isPaused = false;
         this.hasAnimated = false;
+        this.lastTrackScrollLeft = 0;
+        this.trackStalledFrames = 0;
 
         // Drag scroll properties
         this.isDragging = false;
@@ -225,6 +227,13 @@ class PortfolioExpansion {
         const techStack = card.dataset.techStack ? card.dataset.techStack.split(',') : [];
         const projectUrl = card.querySelector('a')?.href || '#';
 
+        // Helper to get relative path for comparison
+        const getRelativePath = (url) => {
+            if (!url) return '';
+            const parts = url.split('/');
+            return parts.slice(-3).join('/'); // Get last 3 parts: assets/img/portfolio/item.jpg
+        };
+
         // Setup Carousel
         let gallery = [];
         if (card.dataset.gallery) {
@@ -279,7 +288,10 @@ class PortfolioExpansion {
             controls.style.display = 'flex';
 
             // Ensure main image is first in gallery if not already included
-            if (!gallery.includes(image)) {
+            const mainRelPath = getRelativePath(image);
+            const galleryRelPaths = gallery.map(src => getRelativePath(src));
+
+            if (!galleryRelPaths.includes(mainRelPath)) {
                 gallery.unshift(image);
             }
 
@@ -323,11 +335,16 @@ class PortfolioExpansion {
             const nextBtn = controls.querySelector('.portfolio-carousel-next');
             const prevBtn = controls.querySelector('.portfolio-carousel-prev');
 
-            nextBtn.onclick = (e) => { e.stopPropagation(); this.goToSlide(this.currentSlide + 1); };
-            prevBtn.onclick = (e) => { e.stopPropagation(); this.goToSlide(this.currentSlide - 1); };
+            nextBtn.onclick = (e) => { e.stopPropagation(); this.goToSlide(this.currentSlide + 1, 1); };
+            prevBtn.onclick = (e) => { e.stopPropagation(); this.goToSlide(this.currentSlide - 1, -1); };
 
             dotsContainer.querySelectorAll('.portfolio-dot').forEach(dot => {
-                dot.onclick = (e) => { e.stopPropagation(); this.goToSlide(parseInt(e.target.dataset.index)); };
+                dot.onclick = (e) => {
+                    e.stopPropagation();
+                    const targetIndex = parseInt(e.currentTarget.dataset.index);
+                    const direction = targetIndex > this.currentSlide ? 1 : -1;
+                    this.goToSlide(targetIndex, direction);
+                };
             });
 
             // Auto-play feature
@@ -507,9 +524,22 @@ class PortfolioExpansion {
         }
     }
 
-    goToSlide(index) {
-        if (index < 0) index = this.galleryLength - 1;
-        if (index >= this.galleryLength) index = 0;
+    goToSlide(index, requestedDirection = null) {
+        if (this.galleryLength <= 0) return;
+
+        let comingFromRight = true;
+
+        if (index < 0) {
+            index = this.galleryLength - 1;
+            comingFromRight = false;
+        } else if (index >= this.galleryLength) {
+            index = 0;
+            comingFromRight = true;
+        } else if (requestedDirection !== null) {
+            comingFromRight = requestedDirection > 0;
+        } else {
+            comingFromRight = index > this.currentSlide;
+        }
 
         this.currentSlide = index;
 
@@ -558,7 +588,8 @@ class PortfolioExpansion {
                 }
             } else if (this.galleryLength === 2) {
                 if (i !== index) {
-                    slide.classList.add('next');
+                    if (comingFromRight) slide.classList.add('next');
+                    else slide.classList.add('prev');
                 }
             }
         });
@@ -575,34 +606,40 @@ class PortfolioExpansion {
     }
 
     startAutoScroll() {
-        // Minimum overflow required to start auto-scrolling (in pixels)
-        const MIN_OVERFLOW_THRESHOLD = 50;
-        // Buffer to prevent rapid direction flipping at boundaries
-        const BOUNDARY_BUFFER = 2;
+        // Minimum overflow required to start auto-scrolling
+        const MIN_OVERFLOW_THRESHOLD = 1;
+
+        // Force disable snap and smooth behavior for programmatic scroll
+        if (this.scrollContainer) {
+            this.scrollContainer.style.setProperty('scroll-snap-type', 'none', 'important');
+            this.scrollContainer.style.setProperty('scroll-behavior', 'auto', 'important');
+        }
 
         const scroll = () => {
             if (!this.isHovering && !this.isExpanded && !this.isDragging && this.scrollContainer) {
-                // Get current dimensions
                 const currentScroll = this.scrollContainer.scrollLeft;
-                const scrollWidth = this.scrollContainer.scrollWidth;
-                const clientWidth = this.scrollContainer.clientWidth;
-                const maxScroll = scrollWidth - clientWidth;
+                const maxScroll = Math.max(0, this.scrollContainer.scrollWidth - this.scrollContainer.clientWidth);
 
-                // Only scroll if there is significant overflow
                 if (maxScroll > MIN_OVERFLOW_THRESHOLD) {
-                    // Ping-pong logic with boundary buffer
-                    if (currentScroll >= maxScroll - BOUNDARY_BUFFER) {
-                        this.scrollDirection = -1; // Reverse to left
-                    } else if (currentScroll <= BOUNDARY_BUFFER) {
-                        this.scrollDirection = 1; // Reverse to right
-                    }
+                    // Use a slightly faster speed (1.0) for reliable pixel crossing
+                    const speed = 1.0;
+                    this.scrollContainer.scrollLeft += (speed * this.scrollDirection);
 
-                    // Increment or decrement scroll position
-                    this.scrollContainer.scrollLeft += (this.autoScrollSpeed * this.scrollDirection);
+                    // Wall Detection: If we didn't move after scrolling, flip direction
+                    if (Math.abs(this.scrollContainer.scrollLeft - this.lastTrackScrollLeft) < 0.1) {
+                        this.trackStalledFrames++;
+                        if (this.trackStalledFrames > 2) { // Fast flip
+                            this.scrollDirection *= -1;
+                            this.trackStalledFrames = 0;
+                        }
+                    } else {
+                        this.trackStalledFrames = 0;
+                    }
+                    this.lastTrackScrollLeft = this.scrollContainer.scrollLeft;
                 } else {
-                    // If no significant overflow, slowly reset to start if not already there
+                    // Reset to start if no overflow
                     if (currentScroll > 0) {
-                        this.scrollContainer.scrollLeft -= this.autoScrollSpeed;
+                        this.scrollContainer.scrollLeft -= 1.0;
                     }
                 }
             }

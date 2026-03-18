@@ -1,41 +1,56 @@
 (function () {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-    let isDragging = false;
+    // Global variables for tracking the active dragged scroller
     let activeScroller = null;
-    let animationId = null;
-    let isPaused = false;
-    let direction = 1; // 1 for right, -1 for left
-    const scrollSpeed = 0.1; // Pixels per frame
+    let isGlobalDown = false;
+    let globalStartX;
+    let globalScrollLeft;
+    let isGlobalDragging = false;
 
     function initScroller(scroller) {
         if (scroller.dataset.initialized) return;
         scroller.dataset.initialized = "true";
 
-        // Disable scroll snap for smooth auto-scroll
-        scroller.style.scrollSnapType = 'none';
+        let localDirection = 1;
+        let localIsPaused = false;
+        const localScrollSpeed = 1.0; // Faster for reliable pixel crossing
+        let lastScrollLeft = scroller.scrollLeft;
+        let stalledFrames = 0;
+
+        // Force disable snap and smooth behavior for programmatic scroll
+        scroller.style.setProperty('scroll-snap-type', 'none', 'important');
+        scroller.style.setProperty('scroll-behavior', 'auto', 'important');
 
         function step() {
-            if (!isPaused && !isDown) {
-                scroller.scrollLeft += scrollSpeed * direction;
+            if (!localIsPaused && !isGlobalDown) {
+                // Determine if there is actual overflow
+                const maxScroll = Math.max(0, scroller.scrollWidth - scroller.clientWidth);
 
-                const maxScroll = scroller.scrollWidth - scroller.clientWidth;
+                if (maxScroll > 2) {
+                    scroller.scrollLeft += localScrollSpeed * localDirection;
 
-                if (scroller.scrollLeft >= maxScroll - 1) {
-                    direction = -1;
-                } else if (scroller.scrollLeft <= 1) {
-                    direction = 1;
+                    // Wall Detection: If we didn't move after scrolling, flip direction
+                    // We allow a few frames of 'stalling' to account for fractional rendering
+                    if (Math.abs(scroller.scrollLeft - lastScrollLeft) < 0.1) {
+                        stalledFrames++;
+                        if (stalledFrames > 2) { // More aggressive flip
+                            localDirection *= -1;
+                            stalledFrames = 0;
+                        }
+                    } else {
+                        stalledFrames = 0;
+                    }
+                    lastScrollLeft = scroller.scrollLeft;
                 }
             }
-            animationId = requestAnimationFrame(step);
+            requestAnimationFrame(step);
         }
 
-        animationId = requestAnimationFrame(step);
+        requestAnimationFrame(step);
 
-        scroller.addEventListener('mouseenter', () => isPaused = true);
+        scroller.addEventListener('mouseenter', () => localIsPaused = true);
         scroller.addEventListener('mouseleave', () => {
-            if (!isDown) isPaused = false;
+            localIsPaused = false;
+            lastScrollLeft = scroller.scrollLeft; // Reset to avoid immediate flip
         });
     }
 
@@ -52,58 +67,49 @@
         const scroller = e.target.closest('.portfolio-scroller');
         if (!scroller) return;
 
-        isDown = true;
-        isPaused = true;
+        isGlobalDown = true;
         activeScroller = scroller;
         scroller.classList.add('active');
-        startX = e.pageX - scroller.offsetLeft;
-        scrollLeft = scroller.scrollLeft;
-        isDragging = false;
+        globalStartX = e.pageX - scroller.offsetLeft;
+        globalScrollLeft = scroller.scrollLeft;
+        isGlobalDragging = false;
+        scroller.style.scrollBehavior = 'auto';
     });
 
-    document.addEventListener('mouseleave', () => {
-        if (!isDown) return;
-        isDown = false;
-        isPaused = false;
+    document.addEventListener('mouseup', () => {
+        if (!isGlobalDown) return;
+        isGlobalDown = false;
         if (activeScroller) {
             activeScroller.classList.remove('active');
-        }
-    });
-
-    document.addEventListener('mouseup', (e) => {
-        if (!isDown) return;
-        isDown = false;
-        isPaused = false;
-        if (activeScroller) {
-            activeScroller.classList.remove('active');
+            activeScroller.style.scrollBehavior = 'auto'; // Keep auto
         }
     });
 
     document.addEventListener('mousemove', (e) => {
-        if (!isDown || !activeScroller) return;
+        if (!isGlobalDown || !activeScroller) return;
 
         const x = e.pageX - activeScroller.offsetLeft;
-        const walk = (x - startX) * 0.1; // Scroll speed
+        const walk = (x - globalStartX) * 1.5;
 
-        if (Math.abs(walk) > 0.1) {
-            isDragging = true;
+        if (Math.abs(walk) > 5) {
+            isGlobalDragging = true;
         }
 
-        if (isDragging) {
+        if (isGlobalDragging) {
             e.preventDefault();
-            activeScroller.scrollLeft = scrollLeft - walk;
+            activeScroller.scrollLeft = globalScrollLeft - walk;
         }
     });
 
     // Prevent clicks on portfolio items if we were dragging
     document.addEventListener('click', (e) => {
-        if (isDragging) {
+        if (isGlobalDragging) {
             const scroller = e.target.closest('.portfolio-scroller');
             if (scroller) {
                 e.stopImmediatePropagation();
                 e.preventDefault();
             }
-            isDragging = false;
+            isGlobalDragging = false;
         }
     }, true);
 })();
