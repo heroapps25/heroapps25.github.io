@@ -352,8 +352,10 @@ const ContentLoader = {
                 }
             });
 
-            gridContainer.innerHTML = uniqueMembers.map(member => `
-                <div class="col-sm-6 col-md-4 col-lg-3 team-card show" data-categories="${member.categories.join(',')}">
+            gridContainer.innerHTML = uniqueMembers.map((member, index) => `
+                <div class="col-sm-6 col-md-4 col-lg-3 team-card" 
+                     data-categories="${member.categories.join(',')}"
+                     style="--team-idx: ${index}">
                     <div class="team-card-image-wrapper">
                         <div class="team-card-image-inner">
                             <img src="${member.image}" alt="${member.name}" class="team-card-image" />
@@ -364,37 +366,56 @@ const ContentLoader = {
                 </div>
             `).join('');
 
-            // Add filter functionality
             const filterBtns = document.querySelectorAll('.team-filter-btn');
             const teamCards = document.querySelectorAll('.team-card');
 
+            // Perfect Filtering Logic
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    // Remove active from all
                     filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active to clicked
                     btn.classList.add('active');
 
                     const filterValue = btn.getAttribute('data-filter');
+                    let visibleCount = 0;
 
                     teamCards.forEach(card => {
+                        // Remove show class to prepare for re-trigger
                         card.classList.remove('show');
+                        card.classList.add('leaving');
 
-                        // Use a timeout to allow the exit animation if we add one, or just hide
                         setTimeout(() => {
-                            const cardCategories = card.getAttribute('data-categories').split(',');
+                            const cardCategories = (card.getAttribute('data-categories') || '').split(',');
                             if (filterValue === 'ALL' || cardCategories.includes(filterValue)) {
-                                card.classList.remove('hidden');
-                                // Force reflow
+                                card.classList.remove('hidden', 'leaving');
+                                card.style.setProperty('--team-idx', visibleCount);
+                                visibleCount++;
+
+                                // Force reflow and re-add show to trigger animation
                                 void card.offsetWidth;
                                 card.classList.add('show');
                             } else {
                                 card.classList.add('hidden');
+                                card.classList.remove('leaving');
                             }
-                        }, 50); // slight delay for visual effect
+                        }, 300);
                     });
                 });
             });
+
+            // Dedicated IntersectionObserver for initial scroll-in reveal
+            const entranceObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        gridContainer.querySelectorAll('.team-card:not(.hidden)').forEach(card => {
+                            card.classList.add('show');
+                        });
+                        // Optional: unobserve if we only want it to happen once
+                        // entranceObserver.unobserve(gridContainer);
+                    }
+                });
+            }, { threshold: 0.1 });
+            entranceObserver.observe(gridContainer);
+
         }
     },
 
