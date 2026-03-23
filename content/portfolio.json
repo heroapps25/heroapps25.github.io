@@ -482,6 +482,34 @@
             "bgColor": "#0f172a"
         },
         {
+            "id": "material-3-design",
+            "title": "Material 3 – Mobile UI Design",
+            "category": "App & Web Designs",
+            "serviceCategory": "App & Web Designs",
+            "description": "A mobile design project showcasing modern UI components and design patterns based on Material Design 3 guidelines. This project demonstrates the implementation of modern mobile design systems and UI components.<br><br><b>Design Features:</b><ul><li>Material Design 3 components and layouts</li><li>Dynamic color theming</li><li>Modern navigation patterns</li><li>UI components such as buttons, cards, dialogs, and forms</li><li>Consistent spacing, typography, and layout structure</li></ul>",
+            "techStack": "Figma, Material Design 3, UI/UX Design, Mobile UI, Design Systems",
+            "cardImage": "assets/img/portfolio/design/m3_card.png",
+            "hoverImage": "assets/img/portfolio/design/m3_card_hover.png",
+            "gallery": [
+                "assets/img/portfolio/design/mat_design_display.png"
+            ],
+            "bgColor": "#6750A4"
+        },
+        {
+            "id": "ph-gov-assist-design",
+            "title": "PH Gov Assist – Mobile App Design",
+            "category": "App & Web Designs",
+            "serviceCategory": "App & Web Designs",
+            "description": "A mobile application UI designed to simplify access to Philippine government services. The design prioritizes clarity, accessibility, and easy navigation for users looking for service guides and requirements.<br><br><b>Design Features:</b><ul><li>Government service category layout</li><li>Step-by-step service guide screens</li><li>Search and quick-access interface</li><li>Clean and accessible mobile layout</li><li>Organized information structure for easy reading</li></ul>",
+            "techStack": "Figma, Mobile App Design, UI/UX Design, Accessibility, Government Service UI",
+            "cardImage": "assets/img/portfolio/design/gov_card.png",
+            "hoverImage": "assets/img/portfolio/design/gov_card_hover.png",
+            "gallery": [
+                "assets/img/portfolio/design/gov_ph_assist_display.png"
+            ],
+            "bgColor": "#0038a8"
+        },
+        {
             "id": "phtech-logo",
             "title": "PHTech Electronic Shop",
             "category": "Graphics, 3D & Animations",
