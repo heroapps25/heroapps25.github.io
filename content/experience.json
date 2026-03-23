@@ -1,6 +1,6 @@
 {
     "heading": "How We Work",
-    "subheading": "A systematic, outcomes-driven approach to building world-class mobile applications.",
+    "subheading": "A systematic, outcomes-driven approach to delivering excellence across mobile, web, and hardware engineering.",
     "steps": [
         {
             "number": "01",
@@ -23,13 +23,13 @@
         {
             "number": "04",
             "title": "Deliver",
-            "description": "Rigorous QA, performance optimization, and seamless deployment to the Play Store.",
+            "description": "Rigorous QA, performance optimization, and seamless deployment to your cloud or production environment.",
             "color": "primary-600"
         },
         {
             "number": "05",
             "title": "Maintain & Improve",
-            "description": "Continuous monitoring, bug fixes, and feature enhancements to ensure long-term app health and user satisfaction.",
+            "description": "Continuous monitoring, maintenance, and feature enhancements to ensure long-term solution excellence and user satisfaction.",
             "color": "primary-600"
         }
     ]
