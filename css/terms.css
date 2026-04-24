@@ -1,0 +1,45 @@
+/* Terms & Conditions Section Styles */
+#terms {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.terms-content-wrapper {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.terms-section-title {
+    color: white;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.terms-text {
+    line-height: 1.8;
+}
+
+.terms-text p {
+    margin-bottom: 1.5rem;
+}
+
+.terms-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.terms-list-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.terms-list-item i {
+    margin-top: 0.35rem;
+}
+
+.last-updated-text {
+    margin-top: 3rem;
+    opacity: 0.6;
+}

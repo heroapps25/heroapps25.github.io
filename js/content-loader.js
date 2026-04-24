@@ -9,7 +9,8 @@ const ContentLoader = {
             this.loadPortfolio(),
             this.loadSkills(),
             this.loadExperience(),
-            this.loadContact()
+            this.loadContact(),
+            this.loadTerms()
         ]);
     },
 
@@ -830,6 +831,50 @@ const ContentLoader = {
             footerNav.innerHTML = data.footerNavLinks.map(link =>
                 `<a class="text-slate-400 hover-text-white text-decoration-none small" href="${link.href}">${link.label}</a>`
             ).join('');
+        }
+    },
+
+    async loadTerms() {
+        const data = await this.fetchJSON('terms.json');
+        if (!data) return;
+
+        this.setText('terms-heading', data.heading);
+        this.setText('terms-last-updated', `Last updated: ${data.lastUpdated}`);
+
+        // Introduction
+        this.setText('terms-intro-title', data.introduction.title);
+        const introContainer = document.getElementById('terms-intro-content');
+        if (introContainer && data.introduction.content) {
+            introContainer.innerHTML = data.introduction.content.map(p => `<p>${p}</p>`).join('');
+        }
+
+        // Sections
+        const sectionsContainer = document.getElementById('terms-sections-container');
+        if (sectionsContainer && data.sections) {
+            sectionsContainer.innerHTML = data.sections.map(section => {
+                let contentHTML = '';
+                if (section.type === 'list') {
+                    contentHTML = `
+                        <ul class="terms-list">
+                            ${section.items.map(item => `
+                                <li class="terms-list-item text-slate-300">
+                                    <i class="fas fa-times-circle text-danger me-2"></i>
+                                    <span>${item}</span>
+                                </li>
+                            `).join('')}
+                        </ul>`;
+                } else {
+                    const paragraphs = section.content.split('\n\n');
+                    contentHTML = `<div class="terms-text">${paragraphs.map(p => `<p>${p}</p>`).join('')}</div>`;
+                }
+
+                return `
+                    <div class="terms-section mb-5">
+                        <h3 class="h4 text-white terms-section-title">${section.title}</h3>
+                        ${contentHTML}
+                    </div>
+                `;
+            }).join('');
         }
     }
 };

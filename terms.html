@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+    <meta name="description" content="Terms and Conditions - HeroApps Software Development Services" />
+    <meta name="author" content="Harold" />
+    <title>Terms & Conditions | HeroApps</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/heroapps-official-logo_no_text-01.svg" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="css/styles.css?v=5.0" rel="stylesheet" />
+    <link href="css/design-system.css?v=5.0" rel="stylesheet" />
+    <link href="css/terms.css?v=1.0" rel="stylesheet" />
+    <link href="css/responsive-fix.css?v=5.1" rel="stylesheet" />
+    <style>
+        .terms-content-wrapper p {
+            margin-bottom: 1.5rem;
+        }
+
+        .terms-content-wrapper a {
+            transition: opacity 0.2s;
+        }
+
+        .terms-content-wrapper a:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <div id="header-container"></div>
+    <div id="terms-container"></div>
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/content-loader.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const pageFiles = [
+                { file: 'header.html', containerId: 'header-container' },
+                { file: 'terms.html', containerId: 'terms-container' },
+                { file: 'footer.html', containerId: 'footer-container' }
+            ];
+
+            const loadPromises = pageFiles.map(({ file, containerId }) => {
+                return fetch(`page/${file}`)
+                    .then(response => {
+                        if (!response.ok) throw new Error(`Failed to load ${file}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById(containerId);
+                        if (container) container.innerHTML = html;
+                    });
+            });
+
+            Promise.all(loadPromises).then(() => {
+                if (window.contentLoader) {
+                    window.contentLoader.initAll().then(() => {
+                        document.dispatchEvent(new CustomEvent('sectionsLoaded'));
+
+                        // Handle cross-page section links
+                        setTimeout(() => {
+                            const navLinks = document.querySelectorAll('#nav-links a, #nav-logo, .footer a, .btn-professional');
+                            navLinks.forEach(link => {
+                                const href = link.getAttribute('href');
+                                if (href && href.startsWith('#')) {
+                                    link.setAttribute('href', 'index.html' + href);
+                                }
+                            });
+                        }, 500);
+                    });
+                }
+            }).catch(err => console.error('Error loading page components:', err));
+        });
+    </script>
+</body>
+
+</html>

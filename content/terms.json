@@ -1,0 +1,68 @@
+{
+    "heading": "Terms & Conditions",
+    "lastUpdated": "April 24, 2026",
+    "introduction": {
+        "title": "1. Introduction",
+        "content": [
+            "Welcome to <b>Heroapps Software Development Services</b> (“Company”, “we”, “our”, “us”)!",
+            "These Terms of Service (“Terms”, “Terms of Service”) govern your use of our website located at <a href=\"https://heroapps.com.ph\">https://heroapps.com.ph</a> (together or individually “Service”) operated by Heroapps Software Development Services.",
+            "Our Privacy Policy also governs your use of our Service and explains how we collect, safeguard and disclose information that results from your use of our web pages.",
+            "Your agreement with us includes these Terms and our Privacy Policy (“Agreements”). You acknowledge that you have read and understood the Agreements, and agree to be bound by them.",
+            "If you do not agree with (or cannot comply with) Agreements, then you may not use the Service, but please let us know by emailing <a href=\"mailto:heroapps25@gmail.com\">heroapps25@gmail.com</a> so we can try to find a solution. These Terms apply to all visitors, users, and others who wish to access or use the Service."
+        ]
+    },
+    "sections": [
+        {
+            "title": "2. Communications",
+            "content": "By using our Service, you agree to subscribe to newsletters, marketing or promotional materials, and other information we may send. However, you may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or by emailing at heroapps25@gmail.com."
+        },
+        {
+            "title": "3. Purchases",
+            "content": "If you wish to purchase any product or service made available through Service (“Purchase”), you may be asked to supply certain information relevant to your Purchase including but not limited to, your credit or debit card number, the expiration date of your card, your billing address, and your shipping information.\n\nYou represent and warrant that: (i) you have the legal right to use any card(s) or other payment methods (s) in connection with any Purchase; and that (ii) the information you supply to us is true, correct, and complete.\n\nWe may employ the use of third-party services to facilitate payment and the completion of Purchases. By submitting your information, you grant us the right to provide the information to these third parties subject to our Privacy Policy.\n\nWe reserve the right to refuse or cancel your order at any time for reasons including but not limited to product or service availability, errors in the description or price of the product or service, error in your order, or other reasons.\n\nWe reserve the right to refuse or cancel your order if fraud or an unauthorized or illegal transaction is suspected."
+        },
+        {
+            "title": "4. Contest, Sweepstakes, and Promotions",
+            "content": "Any contests, sweepstakes, or other promotions (collectively, “Promotions”) made available through Service may be governed by rules that are separate from these Terms of Service. If you participate in any Promotions, please review the applicable rules as well as our Privacy Policy. If the rules for a Promotion conflict with these Terms of Service, Promotion rules will apply."
+        },
+        {
+            "title": "5. Refunds",
+            "content": "We issue refunds for Contracts within 30 days of the original purchase of the Contract."
+        },
+        {
+            "title": "6. Content",
+            "content": "Our Service allows you to post, link, store, share, and otherwise make available certain information, text, graphics, videos, or other material (“Content”). You are responsible for the Content that you post on or through Service, including its legality, reliability, and appropriateness.\n\nBy posting Content on or through Service, You represent and warrant that: (i) Content is yours (you own it) and/or you have the right to use it and the right to grant us the rights and license as provided in these Terms, and (ii) that the posting of your Content on or through Service does not violate the privacy rights, publicity rights, copyrights, contract rights or any other rights of any person or entity. We reserve the right to terminate the account of anyone found to be infringing on a copyright."
+        },
+        {
+            "title": "7. Prohibited Uses",
+            "type": "list",
+            "items": [
+                "In any way that violates any applicable national or international law or regulation.",
+                "To exploit, harm, or attempt to exploit or harm minors in any way by exposing them to inappropriate content or otherwise.",
+                "To transmit, or procure the sending of, any advertising or promotional material, including any “junk mail”, “chain letter,” “spam,” or any other similar solicitation.",
+                "To impersonate or attempt to impersonate Company, a Company employee, another user, or any other person or entity.",
+                "In any way that infringes upon the rights of others, or in any way is illegal, threatening, fraudulent, or harmful, or in connection with any unlawful, illegal, fraudulent, or harmful purpose or activity.",
+                "To engage in any other conduct that restricts or inhibits anyone’s use or enjoyment of Service, or which, as determined by us, may harm or offend the Company or users of Service or expose them to liability."
+            ]
+        },
+        {
+            "title": "8. Analytics",
+            "content": "We may use third-party Service Providers to monitor and analyze the use of our Service."
+        },
+        {
+            "title": "9. No Use by Minors",
+            "content": "Service is intended only for access and use by individuals at least eighteen (18) years old. By accessing or using Service, you warrant and represent that you are at least eighteen (18) of age and with the full authority, right, and capacity to enter into this agreement and abide by all of the terms and conditions of the Terms. If you are not at least eighteen (18) years old, you are prohibited from both access and usage of the Service."
+        },
+        {
+            "title": "10. Intellectual Property",
+            "content": "Service and its original content (excluding Content provided by users), features, and functionality are and will remain the exclusive property of Heroapps Software Development Services and its licensors. Service is protected by copyright, trademark, and other laws of and foreign countries. Our trademarks may not be used in connection with any product or service without the prior written consent of Heroapps Software Development Services."
+        },
+        {
+            "title": "11. Governing Law",
+            "content": "These Terms shall be governed and construed under the laws of the Philippines, which governing law applies to the agreement without regard to its conflict of law provisions."
+        },
+        {
+            "title": "12. Contact Us",
+            "content": "Please send your feedback, comments, and requests for technical support by email: <a href=\"mailto:heroapps25@gmail.com\">heroapps25@gmail.com</a>."
+        }
+    ]
+}

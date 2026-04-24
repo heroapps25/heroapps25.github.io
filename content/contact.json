@@ -75,6 +75,10 @@
         {
             "label": "Contact",
             "href": "#contact"
+        },
+        {
+            "label": "Terms & Conditions",
+            "href": "terms.html"
         }
     ]
 }
