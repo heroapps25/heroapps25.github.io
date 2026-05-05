@@ -9,10 +9,22 @@
 /* Wrapper to hide overflow and apply fade masks */
 .trusted-logos-wrapper {
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     position: relative;
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+}
+
+.trusted-logos-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.trusted-logos-wrapper.dragging {
+    cursor: grabbing;
 }
 
 .trusted-logos-grid {
@@ -29,13 +41,16 @@
     /* Fallback */
 }
 
-/* Add the pingpong animation class that will be applied via JS if overflow exists */
-.pingpong-animate {
-    animation: pingpong 20s ease-in-out infinite alternate;
-}
-
-.trusted-logos-grid:hover {
-    animation-play-state: paused;
+/* Animation handled in JS for drag-to-scroll compatibility */
+.trusted-logos-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem 0;
+    width: max-content;
+    margin: 0 auto;
+    transition: transform 0.1s linear;
 }
 
 .trusted-logo-item {

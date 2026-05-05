@@ -80,40 +80,6 @@
             ]
         },
         {
-            "icon": "fas fa-robot",
-            "iconColor": "success",
-            "title": "Robotics Development",
-            "description": "Designing and building autonomous robots, IoT solutions, and custom embedded systems.",
-            "techStack": [
-                {
-                    "name": "Arduino & ESP32",
-                    "devicon": "devicon-arduino-plain colored",
-                    "icon": "fas fa-microchip",
-                    "color": "#00979C",
-                    "glowColor": "rgba(0, 151, 156, 0.4)"
-                },
-                {
-                    "name": "C++",
-                    "devicon": "devicon-cplusplus-plain colored",
-                    "icon": "fas fa-code",
-                    "color": "#00599C",
-                    "glowColor": "rgba(0, 89, 156, 0.4)"
-                },
-                {
-                    "name": "CAD / 3D Printing",
-                    "icon": "fas fa-cube",
-                    "color": "#F05323",
-                    "glowColor": "rgba(240, 83, 35, 0.4)"
-                },
-                {
-                    "name": "Sensors & Motors",
-                    "icon": "fas fa-cogs",
-                    "color": "#FFC107",
-                    "glowColor": "rgba(255, 193, 7, 0.4)"
-                }
-            ]
-        },
-        {
             "icon": "fas fa-pen-nib",
             "iconColor": "warning",
             "title": "App & Web Designs",
@@ -166,6 +132,40 @@
                     "icon": "fas fa-play-circle",
                     "color": "#00CBB4",
                     "glowColor": "rgba(0, 203, 180, 0.4)"
+                }
+            ]
+        },
+        {
+            "icon": "fas fa-robot",
+            "iconColor": "success",
+            "title": "Robotics",
+            "description": "Designing and building autonomous robots, IoT solutions, and custom embedded systems.",
+            "techStack": [
+                {
+                    "name": "Arduino & ESP32",
+                    "devicon": "devicon-arduino-plain colored",
+                    "icon": "fas fa-microchip",
+                    "color": "#00979C",
+                    "glowColor": "rgba(0, 151, 156, 0.4)"
+                },
+                {
+                    "name": "C++",
+                    "devicon": "devicon-cplusplus-plain colored",
+                    "icon": "fas fa-code",
+                    "color": "#00599C",
+                    "glowColor": "rgba(0, 89, 156, 0.4)"
+                },
+                {
+                    "name": "CAD / 3D Printing",
+                    "icon": "fas fa-cube",
+                    "color": "#F05323",
+                    "glowColor": "rgba(240, 83, 35, 0.4)"
+                },
+                {
+                    "name": "Sensors & Motors",
+                    "icon": "fas fa-cogs",
+                    "color": "#FFC107",
+                    "glowColor": "rgba(255, 193, 7, 0.4)"
                 }
             ]
         }

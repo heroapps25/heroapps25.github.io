@@ -162,6 +162,14 @@ window.addEventListener('DOMContentLoaded', event => {
         if (yearElement) {
             yearElement.textContent = new Date().getFullYear();
         }
+
+        // Global Image Drag Disabling
+        // Prevents the browser's default semi-transparent "ghost image" from appearing on drag
+        document.addEventListener('dragstart', (e) => {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
     };
 
     // Wait for sections to be loaded before initializing
