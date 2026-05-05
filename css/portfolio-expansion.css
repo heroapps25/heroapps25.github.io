@@ -232,6 +232,43 @@
     opacity: 1;
 }
 
+/* Disabled/Placeholder Cards */
+.portfolio-card-item.disabled-card {
+    cursor: default;
+}
+
+.portfolio-card-item.disabled-card:hover {
+    transform: none !important;
+    z-index: 1;
+}
+
+.portfolio-card-item.disabled-card:hover .card-image {
+    opacity: 1 !important;
+}
+
+.portfolio-card-item.disabled-card:hover .card-image-hover {
+    opacity: 0 !important;
+}
+
+.coming-soon-tag {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 /* Logo-style cards — image is a brand logo, not a screenshot */
 .portfolio-card-item[data-image-style="logo"] .card-image-wrapper {
     display: flex;

@@ -64,6 +64,9 @@ class PortfolioExpansion {
 
         // Re-attach click listeners to all cards
         this.cards.forEach(card => {
+            // Skip disabled cards
+            if (card.dataset.disabled === 'true') return;
+
             // Remove old listener if exists
             card.removeEventListener('click', card._expandHandler);
             card._expandHandler = (e) => {

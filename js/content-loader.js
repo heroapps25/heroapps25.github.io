@@ -168,39 +168,91 @@ const ContentLoader = {
                 const slug = company.name.toLowerCase().replace(/\s+/g, '-');
                 return `
                     <div class="trusted-logo-item logo-${slug}" title="${company.name}">
-                        <img src="${company.logo}" alt="${company.name}" class="trusted-logo-img" />
+                        <img src="${company.logo}" alt="${company.name}" class="trusted-logo-img" draggable="false" />
                     </div>
                 `;
             }).join('');
 
-            // Setup pingpong scroll effect based on overflow
+            // Setup interactive JS-based scroll with drag support
             const wrapper = container.parentElement;
             wrapper.classList.add('trusted-logos-wrapper');
 
-            const updatePingPong = () => {
-                const parentWidth = wrapper.offsetWidth;
-                const scrollWidth = container.scrollWidth;
+            let isDragging = false;
+            let startX, scrollLeft;
+            let scrollSpeed = 0.8;
+            let direction = 1;
+            let isHovering = false;
 
-                // Only animate if the logos are wider than the container
-                if (scrollWidth > parentWidth) {
-                    container.classList.add('pingpong-animate');
-                    container.style.margin = '0';
-                    container.style.setProperty('--parent-width', `${parentWidth}px`);
+            const animate = () => {
+                const maxScroll = container.scrollWidth - wrapper.offsetWidth;
 
-                    // Adjust animation duration based on overflow distance for consistent speed
-                    const distance = scrollWidth - parentWidth;
-                    const duration = Math.max(15, distance / 40); // Base duration, max speed 40px/s
-                    container.style.animationDuration = `${duration}s`;
-                } else {
-                    container.classList.remove('pingpong-animate');
-                    container.style.margin = '0 auto';
-                    container.style.transform = 'none';
+                if (maxScroll > 0 && !isDragging && !isHovering) {
+                    wrapper.scrollLeft += scrollSpeed * direction;
+
+                    // Ping-pong behavior
+                    if (wrapper.scrollLeft >= maxScroll - 1) {
+                        direction = -1;
+                    } else if (wrapper.scrollLeft <= 1) {
+                        direction = 1;
+                    }
                 }
+                requestAnimationFrame(animate);
             };
 
-            // Wait for images to load before computing widths
-            setTimeout(updatePingPong, 500);
-            window.addEventListener('resize', updatePingPong);
+            // Mouse Events for Dragging
+            wrapper.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                wrapper.classList.add('dragging');
+                startX = e.pageX - wrapper.offsetLeft;
+                scrollLeft = wrapper.scrollLeft;
+                wrapper.style.scrollBehavior = 'auto'; // Disable smooth for instant drag
+            });
+
+            wrapper.addEventListener('mouseleave', () => {
+                isDragging = false;
+                isHovering = false;
+                wrapper.classList.remove('dragging');
+                wrapper.style.scrollBehavior = 'smooth';
+            });
+
+            wrapper.addEventListener('mouseup', () => {
+                isDragging = false;
+                wrapper.classList.remove('dragging');
+                wrapper.style.scrollBehavior = 'smooth';
+            });
+
+            wrapper.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                const x = e.pageX - wrapper.offsetLeft;
+                const walk = (x - startX) * 2; // Drag multiplier
+                wrapper.scrollLeft = scrollLeft - walk;
+            });
+
+            wrapper.addEventListener('mouseenter', () => isHovering = true);
+
+            // Touch Support
+            wrapper.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                startX = e.touches[0].pageX - wrapper.offsetLeft;
+                scrollLeft = wrapper.scrollLeft;
+                wrapper.style.scrollBehavior = 'auto';
+            }, { passive: true });
+
+            wrapper.addEventListener('touchend', () => {
+                isDragging = false;
+                wrapper.style.scrollBehavior = 'smooth';
+            });
+
+            wrapper.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                const x = e.touches[0].pageX - wrapper.offsetLeft;
+                const walk = (x - startX) * 2;
+                wrapper.scrollLeft = scrollLeft - walk;
+            }, { passive: true });
+
+            // Start animation loop
+            requestAnimationFrame(animate);
         }
     },
 
@@ -445,8 +497,9 @@ const ContentLoader = {
         const track = document.getElementById('portfolio-track');
         if (track && data.projects) {
             track.innerHTML = data.projects.map(project => `
-                <div class="portfolio-card-item show"
+                <div class="portfolio-card-item show ${project.disabled ? 'disabled-card' : ''}"
                     data-id="${project.id}"
+                    data-disabled="${project.disabled || false}"
                     data-service-category="${project.serviceCategory || ''}"
                     data-description="${project.description.replace(/"/g, '&quot;')}"
                     data-tech-stack="${project.techStack.toString().replace(/"/g, '&quot;')}"
@@ -454,8 +507,9 @@ const ContentLoader = {
                     data-image-style="${project.imageStyle || 'cover'}"
                     data-gallery='${project.gallery ? JSON.stringify(project.gallery).replace(/'/g, "&apos;") : ""}'>
                     <div class="card-image-wrapper">
-                        <img class="card-image" src="${project.cardImage}" alt="${project.title}" /> 
-                        <img class="card-image-hover" src="${project.hoverImage}" alt="${project.title} Hover" />
+                        <img class="card-image" src="${project.cardImage}" alt="${project.title}" draggable="false" /> 
+                        <img class="card-image-hover" src="${project.hoverImage}" alt="${project.title} Hover" draggable="false" />
+                        ${project.disabled ? '<div class="coming-soon-tag">Coming Soon</div>' : ''}
                         <div class="card-overlay">
                             <div class="card-category">${project.category}</div>
                             <h3 class="card-title">${project.title}</h3>
