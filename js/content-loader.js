@@ -174,7 +174,11 @@ const ContentLoader = {
             }).join('');
 
             // Setup interactive JS-based scroll with drag support
-            const wrapper = container.parentElement;
+            // Target the wrapper specifically to ensure the section label stays static
+            const wrapper = document.getElementById('trusted-logos-wrapper');
+            if (!wrapper) return; 
+            
+            // Ensure the class is present (it might be in HTML already, but we reinforce it)
             wrapper.classList.add('trusted-logos-wrapper');
 
             let isDragging = false;
