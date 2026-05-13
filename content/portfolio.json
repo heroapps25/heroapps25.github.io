@@ -5,10 +5,9 @@
         "ALL",
         "Mobile App Development",
         "Website Development",
-        "Robotics & Embedded Systems",
         "App & Web Designs",
         "Graphics, 3D & Animations",
-        "Game Development"
+        "Robotics & Embedded Systems"
     ],
     "projects": [
         {
@@ -121,7 +120,7 @@
             "description": "Civil Service Exam Reviewer is a comprehensive review app designed to help aspiring candidates prepare effectively for the Civil Service Exam (CSE). Covering both Sub-Professional and Professional levels, the app features a regularly updated question database, realistic practice tests, instant performance feedback, detailed analytics, and a helpful registration guide. With its user-friendly interface and expertly crafted review materials, it enables users to strengthen key areas, improve test-taking skills, and build confidence—making it a reliable companion for achieving success in the Civil Service Exam.",
             "techStack": "Kotlin, Firebase, Room, Jetpack Compose, Google Ads, In-App Purchases",
             "cardImage": "assets/img/portfolio/cseCard.png",
-            "hoverImage": "assets/img/portfolio/cseHoverCard.png",
+            "hoverImage": "assets/img/portfolio/New Assets/cse_splash.mp4",
             "gallery": [
                 "assets/img/portfolio/CSE-GALLERY/CSE/S1.png",
                 "assets/img/portfolio/CSE-GALLERY/CSE/S2.png",
@@ -162,7 +161,7 @@
             "description": "MLBB Game Guide is a comprehensive companion app designed to help players improve their gameplay and strategy in Mobile Legends: Bang Bang. It provides detailed hero information, item builds, emblems, battle spells, rankings, tier lists, and drafting strategies—all in one convenient platform. With organized and easy-to-navigate data, users can explore hero stats and roles, compare items, learn optimal emblem and spell usage, track the current meta, and even simulate team drafts to practice compositions and counters. Regularly updated for accuracy and relevance, the app offers a simple, user-friendly experience for players of all skill levels.",
             "techStack": "Interactive UI, Lottie Animations, API Integration, Social Features, Real-time Stats",
             "cardImage": "assets/img/portfolio/mlbbCard.png",
-            "hoverImage": "assets/img/portfolio/mlbbHoverCard.png",
+            "hoverImage": "assets/img/portfolio/New Assets/mlbb_splash.mp4",
             "gallery": [
                 "assets/img/portfolio/MLBB-GALLERY/MLBB/MLBB1.png",
                 "assets/img/portfolio/MLBB-GALLERY/MLBB/MLBB2.png",
@@ -196,7 +195,40 @@
             ],
             "bgColor": "#2a1a32"
         },
-
+        {
+            "id": "lol-game-guide",
+            "title": "LOL Game Guide",
+            "category": "Education & Guides",
+            "serviceCategory": "Mobile App Development",
+            "description": "LOL Game Guide is a comprehensive companion app designed to help players improve their gameplay and strategy in League of Legends. It provides detailed champion information, item builds, runes, and drafting strategies to help you dominate the Rift.",
+            "techStack": "Kotlin, Jetpack Compose, Riot API, MVVM",
+            "cardImage": "assets/img/portfolio/New Assets/lolguide_card.png",
+            "hoverImage": "assets/img/portfolio/New Assets/lol_splash.mp4",
+            "gallery": [
+                "assets/img/portfolio/New Assets/lol-guide-graphics/1.png",
+                "assets/img/portfolio/New Assets/lol-guide-graphics/2.png",
+                "assets/img/portfolio/New Assets/lol-guide-graphics/3.png",
+                "assets/img/portfolio/New Assets/lol-guide-graphics/4.png",
+                "assets/img/portfolio/New Assets/lol-guide-graphics/5.png",
+                "assets/img/portfolio/New Assets/lol-guide-graphics/6.png",
+                "assets/img/portfolio/New Assets/lol-guide-graphics/7.png"
+            ],
+            "bgColor": "#1e293b"
+        },
+        {
+            "id": "let-exam-reviewer",
+            "title": "LET Exam Reviewer",
+            "category": "Education & Guides",
+            "serviceCategory": "Mobile App Development",
+            "description": "LET Exam Reviewer is a comprehensive review app designed to help aspiring candidates prepare effectively for the Licensure Examination for Teachers (LET). It features organized study modules, mock exam interfaces, and performance analytics to support aspiring educators.",
+            "techStack": "Kotlin, Firebase, Room, Jetpack Compose",
+            "cardImage": "assets/img/portfolio/New Assets/LET_CARD.png",
+            "hoverImage": "assets/img/portfolio/New Assets/LET_HOVER.png",
+            "gallery": [
+                "assets/img/portfolio/New Assets/Let Reviewer.png"
+            ],
+            "bgColor": "#1e293b"
+        },
         {
             "id": "lms",
             "title": "Laundry Management System",
@@ -411,6 +443,32 @@
             "bgColor": "#1e293b"
         },
         {
+            "id": "soccer-robot",
+            "title": "Soccer robot",
+            "category": "Robotics",
+            "serviceCategory": "Robotics & Embedded Systems",
+            "description": "Details for Soccer robot will be updated soon.",
+            "techStack": "TBD",
+            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
+            "hoverImage": "",
+            "gallery": [],
+            "bgColor": "#1e293b",
+            "disabled": true
+        },
+        {
+            "id": "hockey-robot",
+            "title": "Hockey robot",
+            "category": "Robotics",
+            "serviceCategory": "Robotics & Embedded Systems",
+            "description": "Details for Hockey robot will be updated soon.",
+            "techStack": "TBD",
+            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
+            "hoverImage": "",
+            "gallery": [],
+            "bgColor": "#1e293b",
+            "disabled": true
+        },
+        {
             "id": "mlbb-guide-design",
             "title": "MLBB Game Guide",
             "category": "App & Web Designs",
@@ -418,7 +476,7 @@
             "description": "A comprehensive mobile UI design for a Mobile Legends: Bang Bang (MLBB) game guide application. Designed to provide players with quick access to hero statistics, item builds, and gameplay strategies. The interface emphasizes high-impact visuals and efficient data presentation.<br><br><b>Design Features:</b><ul><li>Dynamic hero selection and filtering</li><li>Optimized item build paths and equipment stats</li><li>Role-specific strategy guides and tips</li><li>Sleek, gaming-inspired dark mode interface</li><li>Responsive mobile-first navigation</li><li>Intuitive icon-based visual communication</li></ul>",
             "techStack": "Figma, Mobile App Design, UI/UX Design, Gaming Interface Design, Visual Design",
             "cardImage": "assets/img/portfolio/design/mlbbCard.png",
-            "hoverImage": "assets/img/portfolio/design/mlbbHoverCard.png",
+            "hoverImage": "assets/img/portfolio/New Assets/mlbb_splash.mp4",
             "gallery": [
                 "assets/img/portfolio/design/mlbb_showcase.png"
             ],
@@ -431,8 +489,8 @@
             "serviceCategory": "App & Web Designs",
             "description": "A mobile UI design created for a game guide application for players of League of Legends. The design focuses on easy navigation, organized champion information, and visually engaging layouts for builds and guides.<br><br><b>Design Features:</b><ul><li>Champion list and browsing interface</li><li>Champion detail pages with builds and strategies</li><li>Clean card-based content layout</li><li>Easy navigation between guides and sections</li><li>Game-themed UI style and color palette</li><li>Mobile-friendly layout and readability</li></ul>",
             "techStack": "Figma, Mobile App Design, UI/UX Design, Wireframing, Game Interface",
-            "cardImage": "assets/img/portfolio/design/lol.png",
-            "hoverImage": "assets/img/portfolio/design/lol_hover.png",
+            "cardImage": "assets/img/portfolio/New Assets/lolguide_card.png",
+            "hoverImage": "assets/img/portfolio/New Assets/lol_splash.mp4",
             "gallery": [
                 "assets/img/portfolio/design/lol_guide.png",
                 "assets/img/portfolio/design/lol_guide2.png"
@@ -447,7 +505,7 @@
             "description": "A comprehensive UI/UX design for a Civil Service Exam reviewer application. The design focuses on readability, structured learning paths, and progress tracking to help users prepare effectively for the professional and sub-professional exams.",
             "techStack": "Figma, UI/UX Design, Mobile App Design, Information Architecture",
             "cardImage": "assets/img/portfolio/cseCard.png",
-            "hoverImage": "assets/img/portfolio/cseHoverCard.png",
+            "hoverImage": "assets/img/portfolio/New Assets/cse_splash.mp4",
             "gallery": [
                 "assets/img/portfolio/New Assets/Civil Service.png"
             ],
@@ -477,7 +535,7 @@
             "cardImage": "assets/img/portfolio/ptCard.png",
             "hoverImage": "assets/img/portfolio/ptHoverCard.png",
             "gallery": [
-                "assets/img/portfolio/New Assets/Periodic Table.png"
+                "assets/img/portfolio/New Assets/Periodic Table Asset.png"
             ],
             "bgColor": "#1e293b"
         },
@@ -551,7 +609,20 @@
             ],
             "bgColor": "#6750A4"
         },
-
+        {
+            "id": "webview-app-design",
+            "title": "WebView App – Template Design",
+            "category": "App & Web Designs",
+            "serviceCategory": "App & Web Designs",
+            "description": "A versatile and modern mobile template design for WebView-based applications. This design prioritizes seamless integration of web content with native-feeling navigation and a clean, responsive layout for varied content types.",
+            "techStack": "Figma, UI/UX Design, Mobile App Design, Webview Architecture",
+            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
+            "hoverImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
+            "gallery": [
+                "assets/img/portfolio/New Assets/Web View App Design.png"
+            ],
+            "bgColor": "#1e293b"
+        },
         {
             "id": "clinic-mgmt-design",
             "title": "Clinic Management – Web Design",
@@ -596,6 +667,56 @@
             "bgColor": "#3b82f6"
         },
         {
+            "id": "maharlika-assets",
+            "title": "Maharlika assets",
+            "category": "Graphics",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "A comprehensive collection of game design assets for Maharlika, including environment concepts, character illustrations, and promotional feature graphics that showcase Philippine mythology and local legends.",
+            "techStack": "Game Asset Design, Concept Art, Character Illustration, Visual Design",
+            "cardImage": "assets/img/portfolio/maharlika_card.png",
+            "hoverImage": "assets/img/portfolio/New Assets/Maharlika_hover (1).png",
+            "gallery": [
+                "assets/img/portfolio/New Assets/maharlika-graphics/Background.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/Dragon element.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/ENEMY CHARACTER b.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/ENEMY CHARACTER f.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/ENEMY CHARACTER g.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/ENEMY CHARACTER l.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/ENEMY CHARACTER n.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/Forest variation.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/HERO CHARACTER.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/Map island.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/Map.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/Mountain ranges.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/Projectiles a.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/Projectiles e.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/Projectiles r.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/Projectiles s.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/fortress.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/sea vasal element.png",
+                "assets/img/portfolio/New Assets/maharlika-graphics/tent element.png"
+            ],
+            "bgColor": "#1e293b"
+        },
+        {
+            "id": "berde-bird-assets",
+            "title": "Berde Bird assets",
+            "category": "Graphics",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "A collection of 2D game assets for Berde Bird, including character sprites, obstacle designs, and background elements that define the game's colorful and engaging visual style.",
+            "techStack": "2D Game Art, Sprite Design, Illustration, Character Design",
+            "cardImage": "assets/img/portfolio/New Assets/berdebird_card.png",
+            "hoverImage": "assets/img/portfolio/New Assets/berdebird_hover.png",
+            "gallery": [
+                "assets/img/portfolio/New Assets/berdebird1.png",
+                "assets/img/portfolio/New Assets/berdebird2.png",
+                "assets/img/portfolio/New Assets/berdebird3.png",
+                "assets/img/portfolio/New Assets/berdebird4.png",
+                "assets/img/portfolio/New Assets/berdebird5.png"
+            ],
+            "bgColor": "#1e293b"
+        },
+        {
             "id": "phtech-logo",
             "title": "PHTech Electronic Shop",
             "category": "Graphics, 3D & Animations",
@@ -624,21 +745,103 @@
             "bgColor": "#0c468c"
         },
         {
-            "id": "maharlika-assets",
-            "title": "Maharlika assets",
+            "id": "mlbb-assets",
+            "title": "MLBB Assets & Branding",
             "category": "Graphics",
             "serviceCategory": "Graphics, 3D & Animations",
-            "description": "A comprehensive collection of game design assets for Maharlika, including environment concepts, character illustrations, and promotional feature graphics that showcase Philippine mythology and local legends.",
-            "techStack": "Game Asset Design, Concept Art, Character Illustration, Visual Design",
-            "cardImage": "assets/img/portfolio/maharlika_card.png",
-            "hoverImage": "assets/img/portfolio/New Assets/Maharlika_hover (1).png",
+            "description": "Comprehensive visual identity and graphic assets for Mobile Legends: Bang Bang. This collection includes logo sketch breakdowns, icon designs, and promotional motion graphics that establish a cohesive and high-impact brand presence for the MLBB ecosystem.",
+            "techStack": "Figma, Adobe Illustrator, After Effects",
+            "cardImage": "assets/img/portfolio/mlbbCard.png",
+            "hoverImage": "assets/img/portfolio/New Assets/mlbb_splash.mp4",
             "gallery": [
-                "assets/img/portfolio/New Assets/Feature Graphics des III.png",
-                "assets/img/portfolio/New Assets/Feature Graphics pg2.png",
-                "assets/img/portfolio/New Assets/Feature Graphics pg3(1920X1080).png",
-                "assets/img/portfolio/New Assets/Feature Graphics pg4(1920X1080).png",
-                "assets/img/portfolio/New Assets/Feature Graphics pg5(1920X1080).png",
-                "assets/img/portfolio/New Assets/Feature Graphics pg6(1920X1080).png"
+                "assets/img/portfolio/New Assets/mlbb_asset.png",
+                "assets/img/portfolio/design/mlbbHoverCard.png"
+            ],
+            "bgColor": "#2a1a32"
+        },
+        {
+            "id": "lol-assets",
+            "title": "LOL assets",
+            "category": "Graphics",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "Comprehensive visual identity and graphic assets for League of Legends. This collection includes champion feature graphics, icon designs, and promotional motion graphics that establish a cohesive and high-impact brand presence.",
+            "techStack": "Figma, Adobe Illustrator, After Effects",
+            "cardImage": "assets/img/portfolio/New Assets/lolguide_card.png",
+            "hoverImage": "assets/img/portfolio/New Assets/lol_splash.mp4",
+            "gallery": [
+                "assets/img/portfolio/New Assets/Lol GUide.png",
+                "assets/img/portfolio/design/lol_hover.png"
+            ],
+            "bgColor": "#1e293b"
+        },
+        {
+            "id": "cse-assets",
+            "title": "CSE assets",
+            "category": "Graphics",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "Comprehensive visual identity and graphic assets for the Civil Service Exam Reviewer. This collection includes structured information design, iconography, and promotional motion graphics that help aspiring candidates prepare effectively.",
+            "techStack": "Figma, Adobe Illustrator, After Effects",
+            "cardImage": "assets/img/portfolio/cseCard.png",
+            "hoverImage": "assets/img/portfolio/New Assets/cse_splash.mp4",
+            "gallery": [
+                "assets/img/portfolio/New Assets/cse_asset.png",
+                "assets/img/portfolio/cseHoverCard.png"
+            ],
+            "bgColor": "#1e293b"
+        },
+        {
+            "id": "let-assets",
+            "title": "LET Reviewer assets",
+            "category": "Graphics",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "Comprehensive visual identity and graphic assets for the LET Exam Reviewer. This collection includes educational iconography, structured learning path diagrams, and promotional feature graphics designed to support aspiring educators.",
+            "techStack": "Figma, Adobe Illustrator, Visual Design",
+            "cardImage": "assets/img/portfolio/New Assets/LET_CARD.png",
+            "hoverImage": "assets/img/portfolio/New Assets/LET_HOVER.png",
+            "gallery": [
+                "assets/img/portfolio/New Assets/let_asset.png"
+            ],
+            "bgColor": "#1e293b"
+        },
+        {
+            "id": "periodic-table-assets",
+            "title": "Periodic Table assets",
+            "category": "Graphics",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "Comprehensive visual identity and graphic assets for the Periodic Table educational application. This collection includes interactive element cards, chemical property diagrams, and a clean, scientific interface design that makes learning chemistry engaging and intuitive.",
+            "techStack": "Figma, Adobe Illustrator, Visual Design",
+            "cardImage": "assets/img/portfolio/ptCard.png",
+            "hoverImage": "assets/img/portfolio/ptHoverCard.png",
+            "gallery": [
+                "assets/img/portfolio/New Assets/periodic_asset.png"
+            ],
+            "bgColor": "#1e293b"
+        },
+        {
+            "id": "robot-controller-assets",
+            "title": "Robot Controller assets",
+            "category": "Graphics",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "Visual identity and technical graphics for a high-precision robot controller. This collection includes interface layouts, sensor visualization concepts, and detailed system documentation graphics that ensure intuitive remote operation.",
+            "techStack": "Figma, Adobe Illustrator, Technical Illustration",
+            "cardImage": "assets/img/portfolio/New Assets/robotcont_card.png",
+            "hoverImage": "assets/img/portfolio/New Assets/robotcont_hover.png",
+            "gallery": [
+                "assets/img/portfolio/New Assets/Robot Controller desc.png"
+            ],
+            "bgColor": "#1e293b"
+        },
+        {
+            "id": "thesis-idea-generator-assets",
+            "title": "Thesis Idea Generator assets",
+            "category": "Graphics",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "Visual branding and UI graphic assets for the Thesis Idea Generator. This collection includes creative brainstorming dashboards, categorized research domain icons, and a professional academic aesthetic designed to inspire students.",
+            "techStack": "Figma, UI Design, Visual Systems",
+            "cardImage": "assets/img/portfolio/design/thesis_idea_gen.png",
+            "hoverImage": "assets/img/portfolio/design/thesis_idea_gen_hover.png",
+            "gallery": [
+                "assets/img/portfolio/New Assets/thesisideagen_asset.png"
             ],
             "bgColor": "#1e293b"
         },
@@ -671,20 +874,88 @@
             "bgColor": "#1e293b"
         },
         {
-            "id": "berde-bird-assets",
-            "title": "Berde Bird assets",
+            "id": "material-3-assets",
+            "title": "Material 3 assets",
             "category": "Graphics",
             "serviceCategory": "Graphics, 3D & Animations",
-            "description": "A collection of 2D game assets for Berde Bird, including character sprites, obstacle designs, and background elements that define the game's colorful and engaging visual style.",
-            "techStack": "2D Game Art, Sprite Design, Illustration, Character Design",
-            "cardImage": "assets/img/portfolio/New Assets/berdebird_card.png",
-            "hoverImage": "assets/img/portfolio/New Assets/berdebird_hover.png",
+            "description": "Comprehensive graphic assets and UI components based on Material Design 3 guidelines. This collection includes dynamic color palette concepts, modern navigation patterns, and state-of-the-art mobile UI elements that define the next generation of mobile experiences.",
+            "techStack": "Figma, Material Design 3, Design Systems",
+            "cardImage": "assets/img/portfolio/design/m3_card.png",
+            "hoverImage": "assets/img/portfolio/design/m3_card_hover.png",
             "gallery": [
-                "assets/img/portfolio/New Assets/berdebird1.png",
-                "assets/img/portfolio/New Assets/berdebird2.png",
-                "assets/img/portfolio/New Assets/berdebird3.png",
-                "assets/img/portfolio/New Assets/berdebird4.png",
-                "assets/img/portfolio/New Assets/berdebird5.png"
+                "assets/img/portfolio/New Assets/material3_asset.png"
+            ],
+            "bgColor": "#1e293b"    
+        },
+        {
+            "id": "webview-app-assets",
+            "title": "Webview App assets",
+            "category": "Graphics",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "Visual identity and UI graphic assets for the WebView App template. This collection includes iconography, splash screen concepts, and a cohesive design system for cross-platform webview integration.",
+            "techStack": "Figma, Adobe Illustrator, Visual Branding",
+            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
+            "hoverImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
+            "gallery": [
+                "assets/img/portfolio/New Assets/Web View App Template.png"
+            ],
+            "bgColor": "#1e293b"
+        },
+        {
+            "id": "clinic-mgmt-assets",
+            "title": "Clinic Mgmt assets",
+            "category": "Graphics",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "Visual identity and UI/UX graphic assets for a professional Clinic Management System. Designed for clarity, accessibility, and efficient medical data visualization to improve healthcare delivery.",
+            "techStack": "Figma, UI Design, Visual Branding",
+            "cardImage": "assets/img/portfolio/cmsCardAlt.png",
+            "hoverImage": "assets/img/portfolio/cmsHoverCardAlt.png",
+            "gallery": [
+                "assets/img/portfolio/New Assets/Clinic Management System.png",
+                "assets/img/portfolio/New Assets/cms_asset.png"
+            ],
+            "bgColor": "#1e293b"
+        },
+        {
+            "id": "laundry-mgmt-assets",
+            "title": "Laundry Mgmt assets",
+            "category": "Graphics",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "Visual branding and interface design assets for a streamlined Laundry Management System. Focused on intuitive navigation and clear operational status indicators for business efficiency.",
+            "techStack": "Figma, UI Design, Visual Systems",
+            "cardImage": "assets/img/portfolio/lmsCard.png",
+            "hoverImage": "assets/img/portfolio/lmsHoverCardAlt.png",
+            "gallery": [
+                "assets/img/portfolio/New Assets/lms_asset.png",
+                "assets/img/portfolio/New Assets/Laundry Management  System (MVP 1).png"
+            ],
+            "bgColor": "#1e293b"
+        },
+        {
+            "id": "car-rental-assets",
+            "title": "Car Rental assets",
+            "category": "Graphics",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "Comprehensive graphic assets and UI components for a modern Car Rental Management System. This collection includes vehicle listing cards, administrative dashboard layouts, and a clean, high-performance visual identity.",
+            "techStack": "Figma, UI Design, Visual Branding",
+            "cardImage": "assets/img/portfolio/design/car_rental9.png",
+            "hoverImage": "assets/img/portfolio/design/car_rental_hover0.png",
+            "gallery": [
+                "assets/img/portfolio/New Assets/car_asset.png"
+            ],
+            "bgColor": "#1e293b"
+        },
+        {
+            "id": "lto-assets",
+            "title": "LTO Reviewer assets",
+            "category": "Graphics",
+            "serviceCategory": "Graphics, 3D & Animations",
+            "description": "Comprehensive visual identity and graphic assets for the Ultimate LTO Exam Reviewer. This collection includes road sign iconography, traffic rule diagrams, and promotional feature graphics designed for driver education.",
+            "techStack": "Figma, Adobe Illustrator, Visual Design",
+            "cardImage": "assets/img/portfolio/LTOCard.png",
+            "hoverImage": "assets/img/portfolio/LTOHoverCard.png",
+            "gallery": [
+                "assets/img/portfolio/New Assets/lto_asset4.png"
             ],
             "bgColor": "#1e293b"
         },
@@ -708,43 +979,6 @@
             "bgColor": "#dc2626"
         },
         {
-            "id": "maharlika",
-            "title": "Maharlika",
-            "category": "Game Development",
-            "serviceCategory": "Game Development",
-            "description": "Maharlika is a visually stunning game inspired by Philippine mythology and culture. Featuring expansive environments, intricate character designs, and an engaging narrative that brings local legends to life in a modern gaming experience.",
-            "techStack": "Game Development, Character Design, Environment Art, Unity",
-            "cardImage": "assets/img/portfolio/maharlika_card.png",
-            "hoverImage": "assets/img/portfolio/New Assets/Maharlika_hover (1).png",
-            "gallery": [
-                "assets/img/portfolio/New Assets/Feature Graphics des III.png",
-                "assets/img/portfolio/New Assets/Feature Graphics pg2.png",
-                "assets/img/portfolio/New Assets/Feature Graphics pg3(1920X1080).png",
-                "assets/img/portfolio/New Assets/Feature Graphics pg4(1920X1080).png",
-                "assets/img/portfolio/New Assets/Feature Graphics pg5(1920X1080).png",
-                "assets/img/portfolio/New Assets/Feature Graphics pg6(1920X1080).png"
-            ],
-            "bgColor": "#1e293b"
-        },
-        {
-            "id": "berde-bird",
-            "title": "Berde Bird",
-            "category": "Game Development",
-            "serviceCategory": "Game Development",
-            "description": "Berde Bird is a vibrant and addictive mobile game where players navigate a small green bird through a series of challenging obstacles. With its charming art style and smooth gameplay, it offers a fun and competitive experience for players of all ages.",
-            "techStack": "Mobile Game Development, Unity, 2D Animation, C#",
-            "cardImage": "assets/img/portfolio/New Assets/berdebird_card.png",
-            "hoverImage": "assets/img/portfolio/New Assets/berdebird_hover.png",
-            "gallery": [
-                "assets/img/portfolio/New Assets/berdebird1.png",
-                "assets/img/portfolio/New Assets/berdebird2.png",
-                "assets/img/portfolio/New Assets/berdebird3.png",
-                "assets/img/portfolio/New Assets/berdebird4.png",
-                "assets/img/portfolio/New Assets/berdebird5.png"
-            ],
-            "bgColor": "#16a34a"
-        },
-        {
             "id": "arduino-mega-casing",
             "title": "Arduino Mega Casing",
             "category": "Graphics, 3D & Animations",
@@ -755,214 +989,6 @@
             "hoverImage": "assets/img/portfolio/Robotics_images/box_hover2.png",
             "gallery": [],
             "bgColor": "#6b7280"
-        },
-        {
-            "id": "lol-game-guide",
-            "title": "LOL Game Guide",
-            "category": "Education & Guides",
-            "serviceCategory": "Mobile App Development",
-            "description": "Details for LOL Game Guide will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "soccer-robot",
-            "title": "Soccer robot",
-            "category": "Robotics",
-            "serviceCategory": "Robotics & Embedded Systems",
-            "description": "Details for Soccer robot will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "hockey-robot",
-            "title": "Hockey robot",
-            "category": "Robotics",
-            "serviceCategory": "Robotics & Embedded Systems",
-            "description": "Details for Hockey robot will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "mlbb-assets",
-            "title": "MLBB assets",
-            "category": "Graphics",
-            "serviceCategory": "Graphics, 3D & Animations",
-            "description": "Details for MLBB assets will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "lol-assets",
-            "title": "LOL assets",
-            "category": "Graphics",
-            "serviceCategory": "Graphics, 3D & Animations",
-            "description": "Details for LOL assets will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "cse-assets",
-            "title": "CSE assets",
-            "category": "Graphics",
-            "serviceCategory": "Graphics, 3D & Animations",
-            "description": "Details for CSE assets will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "periodic-table-assets",
-            "title": "Periodic Table assets",
-            "category": "Graphics",
-            "serviceCategory": "Graphics, 3D & Animations",
-            "description": "Details for Periodic Table assets will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "robot-controller-assets",
-            "title": "Robot Controller assets",
-            "category": "Graphics",
-            "serviceCategory": "Graphics, 3D & Animations",
-            "description": "Details for Robot Controller assets will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "thesis-idea-generator-assets",
-            "title": "Thesis Idea Generator assets",
-            "category": "Graphics",
-            "serviceCategory": "Graphics, 3D & Animations",
-            "description": "Details for Thesis Idea Generator assets will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "material-3-assets",
-            "title": "Material 3 assets",
-            "category": "Graphics",
-            "serviceCategory": "Graphics, 3D & Animations",
-            "description": "Details for Material 3 assets will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "webview-app-assets",
-            "title": "Webview App assets",
-            "category": "Graphics",
-            "serviceCategory": "Graphics, 3D & Animations",
-            "description": "Details for Webview App assets will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "clinic-mgmt-assets",
-            "title": "Clinic Mgmt assets",
-            "category": "Graphics",
-            "serviceCategory": "Graphics, 3D & Animations",
-            "description": "Details for Clinic Mgmt assets will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "laundry-mgmt-assets",
-            "title": "Laundry Mgmt assets",
-            "category": "Graphics",
-            "serviceCategory": "Graphics, 3D & Animations",
-            "description": "Details for Laundry Mgmt assets will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "car-rental-assets",
-            "title": "Car Rental assets",
-            "category": "Graphics",
-            "serviceCategory": "Graphics, 3D & Animations",
-            "description": "Details for Car Rental assets will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "let-exam-reviewer",
-            "title": "LET Exam Reviewer",
-            "category": "Education & Guides",
-            "serviceCategory": "Mobile App Development",
-            "description": "Details for LET Exam Reviewer will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
-        },
-        {
-            "id": "webview-app-design",
-            "title": "WebView App – Template Design",
-            "category": "App & Web Designs",
-            "serviceCategory": "App & Web Designs",
-            "description": "Details for WebView App – Template Design will be updated soon.",
-            "techStack": "TBD",
-            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
-            "hoverImage": "",
-            "gallery": [],
-            "bgColor": "#1e293b",
-            "disabled": true
         }
     ]
 }
