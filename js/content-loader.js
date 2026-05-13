@@ -176,8 +176,8 @@ const ContentLoader = {
             // Setup interactive JS-based scroll with drag support
             // Target the wrapper specifically to ensure the section label stays static
             const wrapper = document.getElementById('trusted-logos-wrapper');
-            if (!wrapper) return; 
-            
+            if (!wrapper) return;
+
             // Ensure the class is present (it might be in HTML already, but we reinforce it)
             wrapper.classList.add('trusted-logos-wrapper');
 
@@ -512,7 +512,10 @@ const ContentLoader = {
                     data-gallery='${project.gallery ? JSON.stringify(project.gallery).replace(/'/g, "&apos;") : ""}'>
                     <div class="card-image-wrapper">
                         <img class="card-image" src="${project.cardImage}" alt="${project.title}" draggable="false" /> 
-                        <img class="card-image-hover" src="${project.hoverImage}" alt="${project.title} Hover" draggable="false" />
+                        ${project.hoverImage && project.hoverImage.match(/\.(mp4|webm|mov)$/i) 
+                            ? `<video class="card-image-hover" src="${project.hoverImage}" muted autoplay loop playsinline draggable="false"></video>` 
+                            : `<img class="card-image-hover" src="${project.hoverImage || ''}" alt="${project.title} Hover" draggable="false" />`
+                        }
                         ${project.disabled ? '<div class="coming-soon-tag">Coming Soon</div>' : ''}
                         <div class="card-overlay">
                             <div class="card-category">${project.category}</div>
