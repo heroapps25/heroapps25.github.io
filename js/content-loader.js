@@ -423,8 +423,8 @@ const ContentLoader = {
                 </div>
             `).join('');
 
-            const filterBtns = document.querySelectorAll('.team-filter-btn');
-            const teamCards = document.querySelectorAll('.team-card');
+            const filterBtns = filtersContainer.querySelectorAll('.team-filter-btn');
+            const teamCards = gridContainer.querySelectorAll('.team-card');
 
             // Perfect Filtering Logic
             filterBtns.forEach(btn => {
