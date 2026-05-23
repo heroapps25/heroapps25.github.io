@@ -1,0 +1,62 @@
+/* Privacy Policy Section Styles */
+#privacy {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.privacy-content-wrapper {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.privacy-section-title {
+    color: white;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.privacy-subtitle {
+    color: #e2e8f0; /* slate-200 */
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.privacy-subsubtitle {
+    color: #cbd5e1; /* slate-300 */
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.privacy-text {
+    line-height: 1.8;
+}
+
+.privacy-text p {
+    margin-bottom: 1.5rem;
+}
+
+.privacy-list {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-list-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.privacy-list-item i {
+    margin-top: 0.35rem;
+}
+
+.last-updated-text {
+    margin-top: 3rem;
+    opacity: 0.6;
+}

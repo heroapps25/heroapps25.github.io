@@ -10,7 +10,8 @@ const ContentLoader = {
             this.loadSkills(),
             this.loadExperience(),
             this.loadContact(),
-            this.loadTerms()
+            this.loadTerms(),
+            this.loadPrivacy()
         ]);
     },
 
@@ -932,6 +933,77 @@ const ContentLoader = {
                 return `
                     <div class="terms-section mb-5">
                         <h3 class="h4 text-white terms-section-title">${section.title}</h3>
+                        ${contentHTML}
+                    </div>
+                `;
+            }).join('');
+        }
+    },
+
+    async loadPrivacy() {
+        const data = await this.fetchJSON('privacy.json');
+        if (!data) return;
+
+        this.setText('privacy-heading', data.heading);
+        this.setText('privacy-last-updated', `Effective Date: ${data.lastUpdated}`);
+
+        // Introduction
+        this.setText('privacy-intro-title', data.introduction.title);
+        const introContainer = document.getElementById('privacy-intro-content');
+        if (introContainer && data.introduction.content) {
+            introContainer.innerHTML = data.introduction.content.map(p => `<p>${p}</p>`).join('');
+        }
+
+        // Sections
+        const sectionsContainer = document.getElementById('privacy-sections-container');
+        if (sectionsContainer && data.sections) {
+            sectionsContainer.innerHTML = data.sections.map(section => {
+                let contentHTML = '';
+                if (section.type === 'bullet-list') {
+                    contentHTML = `
+                        <ul class="privacy-list">
+                            ${section.items.map(item => `
+                                <li class="privacy-list-item text-slate-300">
+                                    <i class="fas fa-check-circle text-primary-500 me-2"></i>
+                                    <span>${item}</span>
+                                </li>
+                            `).join('')}
+                        </ul>`;
+                } else if (section.isSubtitle) {
+                    return `<h4 class="privacy-subtitle">${section.title}</h4>`;
+                } else if (section.isSubSubtitle) {
+                    let textHTML = '';
+                    if (section.content) {
+                        const paragraphs = section.content.split('\n\n');
+                        textHTML = `<div class="privacy-text">${paragraphs.map(p => `<p>${p}</p>`).join('')}</div>`;
+                    }
+                    return `
+                        <div class="mb-4">
+                            <h5 class="privacy-subsubtitle">${section.title}</h5>
+                            ${textHTML}
+                        </div>
+                    `;
+                } else {
+                    let textHTML = '';
+                    if (section.content) {
+                        const paragraphs = section.content.split('\n\n');
+                        textHTML = `<div class="privacy-text">${paragraphs.map(p => `<p>${p}</p>`).join('')}</div>`;
+                    }
+                    
+                    if (section.title) {
+                        return `
+                            <div class="privacy-section mb-5">
+                                <h3 class="h4 text-white privacy-section-title">${section.title}</h3>
+                                ${textHTML}
+                            </div>
+                        `;
+                    } else {
+                        return `<div class="privacy-section mb-4">${textHTML}</div>`;
+                    }
+                }
+
+                return `
+                    <div class="privacy-section mb-4">
                         ${contentHTML}
                     </div>
                 `;
