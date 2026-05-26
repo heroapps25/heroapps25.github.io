@@ -107,11 +107,11 @@
 
 /* Nav row card — strip all card styling */
 .skills-sidebar-view #skills-pillars .expertise-pillar-card {
-    padding: 1rem 1.25rem !important;
+    padding: 0.85rem 1rem !important;
     /* Override the p-4 from JS */
-    margin: 0 0.75rem !important;
+    margin: 0 0.5rem !important;
     /* Force margins on left and right to create the gap */
-    width: calc(100% - 1.5rem) !important;
+    width: calc(100% - 1rem) !important;
     min-height: auto;
     /* Stretch horizontal color fill */
     backdrop-filter: none !important;
@@ -152,21 +152,22 @@
 
 /* Title + icon sizing */
 .skills-sidebar-view #skills-pillars .title-dynamic {
-    font-size: clamp(0.9rem, 1.2vw, 1.2rem) !important;
+    font-size: clamp(0.85rem, 1vw, 1.05rem) !important;
     /* Responsive text to match reference on large screens, scales down slightly */
     font-weight: 500 !important;
     /* Slightly less bold to match reference */
     color: rgba(255, 255, 255, 0.7) !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
     overflow: visible !important;
-    line-height: 1 !important;
+    line-height: 1.3 !important;
     margin-bottom: 0 !important;
+    flex: 1 !important;
+    min-width: 0 !important;
 }
 
 .skills-sidebar-view #skills-pillars .expertise-active .title-dynamic {
     color: rgba(255, 255, 255, 1) !important;
-    font-weight: 600 !important;
-    /* Bold when active */
+    /* Keep same font weight to prevent shifting layout */
 }
 
 .skills-sidebar-view #skills-pillars .icon-dynamic {
@@ -188,7 +189,7 @@
     align-items: center !important;
     margin-bottom: 0 !important;
     gap: 0 !important;
-    column-gap: 1.2rem !important;
+    column-gap: 0.85rem !important;
     /* Much larger gap to match reference exactly */
 }
 
@@ -405,15 +406,17 @@
 @keyframes techStackFadeIn {
     from {
         opacity: 0;
-        transform: scale(0.9);
+        transform: translateY(8px);
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
     }
 }
 
 .tech-stack-item-animated {
-    animation: techStackFadeIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: techStackFadeIn 0.35s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }

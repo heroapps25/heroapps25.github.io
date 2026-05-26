@@ -618,7 +618,17 @@ const ContentLoader = {
                 // Icon badge HTML
                 let badgeIconHTML = '';
                 if (icon && icon.startsWith('devicon-')) {
-                    badgeIconHTML = `<i class="${icon}"></i>`;
+                    const isTargetIcon = icon.includes('aftereffects') || 
+                                         icon.includes('photoshop') || 
+                                         icon.includes('illustrator') || 
+                                         icon.includes('xd') || 
+                                         icon.includes('raspberrypi');
+                    if (isTargetIcon) {
+                        const cleanIcon = icon.replace(' colored', '');
+                        badgeIconHTML = `<i class="${cleanIcon}" style="color:${color};"></i>`;
+                    } else {
+                        badgeIconHTML = `<i class="${icon}"></i>`;
+                    }
                 } else if (icon && (icon.startsWith('fas ') || icon.startsWith('far ') || icon.startsWith('fab ') || icon.startsWith('fa-'))) {
                     badgeIconHTML = `<i class="${icon}" style="color:${color};"></i>`;
                 } else {
