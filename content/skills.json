@@ -1,12 +1,12 @@
 {
     "heading": "Core Expertise",
-    "subheading": "Specializing in high-performance Android development with a focus on scalability, maintainability, and exceptional user experience.",
+    "subheading": "Multidisciplinary technical capability spanning mobile apps, high-performance websites, creative UI/UX design, advanced robotics, and physical prototyping.",
     "pillars": [
         {
             "icon": "fas fa-mobile-alt",
             "iconColor": "primary-600",
             "title": "Mobile App Development",
-            "description": "High-performance, native Android experiences built securely with Kotlin & Java.",
+            "description": "High-performance native apps and cross-platform mobile solutions built for absolute scale and modern architecture.",
             "techStack": [
                 {
                     "name": "Kotlin",
@@ -23,23 +23,30 @@
                     "glowColor": "rgba(66, 133, 244, 0.4)"
                 },
                 {
-                    "name": "Coroutines",
-                    "icon": "fas fa-rotate",
+                    "name": "KMP & CMP",
+                    "icon": "fas fa-cubes",
+                    "color": "#A390FF",
+                    "glowColor": "rgba(163, 144, 255, 0.4)"
+                },
+                {
+                    "name": "Modern Architecture",
+                    "icon": "fas fa-sitemap",
                     "color": "#00BCD4",
                     "glowColor": "rgba(0, 188, 212, 0.4)"
                 },
                 {
-                    "name": "Room DB",
-                    "devicon": "devicon-sqlite-plain colored",
-                    "icon": "fas fa-database",
-                    "color": "#2196F3",
-                    "glowColor": "rgba(33, 150, 243, 0.4)"
+                    "name": "React Native",
+                    "devicon": "devicon-react-original colored",
+                    "icon": "fab fa-react",
+                    "color": "#61DAFB",
+                    "glowColor": "rgba(97, 218, 251, 0.4)"
                 },
                 {
-                    "name": "Retrofit",
-                    "icon": "fas fa-right-left",
-                    "color": "#00ACC1",
-                    "glowColor": "rgba(0, 172, 193, 0.4)"
+                    "name": "Flutter",
+                    "devicon": "devicon-flutter-plain colored",
+                    "icon": "fab fa-flutter",
+                    "color": "#38B6FF",
+                    "glowColor": "rgba(56, 182, 255, 0.4)"
                 }
             ]
         },
@@ -47,8 +54,15 @@
             "icon": "fas fa-laptop-code",
             "iconColor": "info",
             "title": "Website Development",
-            "description": "Responsive, scalable, and fully optimized websites tailored to your business needs.",
+            "description": "Responsive, robust, and optimized web applications engineered using modern standards and fullstack frameworks.",
             "techStack": [
+                {
+                    "name": "Laravel",
+                    "devicon": "devicon-laravel-plain colored",
+                    "icon": "fab fa-laravel",
+                    "color": "#FF2D20",
+                    "glowColor": "rgba(255, 45, 32, 0.4)"
+                },
                 {
                     "name": "React",
                     "devicon": "devicon-react-original colored",
@@ -57,33 +71,149 @@
                     "glowColor": "rgba(97, 218, 251, 0.4)"
                 },
                 {
-                    "name": "HTML5",
+                    "name": "TypeScript",
+                    "devicon": "devicon-typescript-plain colored",
+                    "icon": "fab fa-js",
+                    "color": "#50B4FF",
+                    "glowColor": "rgba(80, 180, 255, 0.4)"
+                },
+                {
+                    "name": "Scss",
+                    "icon": "fab fa-sass",
+                    "color": "#00B0FF",
+                    "glowColor": "rgba(0, 176, 255, 0.4)"
+                },
+                {
+                    "name": "Tailwind",
+                    "devicon": "devicon-tailwindcss-plain colored",
+                    "icon": "fab fa-css3-alt",
+                    "color": "#06B6D4",
+                    "glowColor": "rgba(6, 182, 212, 0.4)"
+                },
+                {
+                    "name": "Vue3",
+                    "devicon": "devicon-vuejs-plain colored",
+                    "icon": "fab fa-vuejs",
+                    "color": "#4FC08D",
+                    "glowColor": "rgba(79, 192, 141, 0.4)"
+                },
+                {
+                    "name": "Svelte",
+                    "devicon": "devicon-svelte-plain colored",
+                    "icon": "fab fa-html5",
+                    "color": "#FF3E00",
+                    "glowColor": "rgba(255, 62, 0, 0.4)"
+                },
+                {
+                    "name": "NextJS",
+                    "devicon": "devicon-nextjs-plain",
+                    "icon": "fab fa-node-js",
+                    "color": "#FFFFFF",
+                    "glowColor": "rgba(255, 255, 255, 0.2)"
+                },
+                {
+                    "name": "Nuxt",
+                    "devicon": "devicon-nuxtjs-plain colored",
+                    "icon": "fab fa-node-js",
+                    "color": "#00DC82",
+                    "glowColor": "rgba(0, 220, 130, 0.4)"
+                },
+                {
+                    "name": "HTML",
                     "devicon": "devicon-html5-plain colored",
                     "icon": "fab fa-html5",
                     "color": "#E34F26",
                     "glowColor": "rgba(227, 79, 38, 0.4)"
                 },
                 {
-                    "name": "CSS3",
+                    "name": "CSS",
                     "devicon": "devicon-css3-plain colored",
                     "icon": "fab fa-css3-alt",
-                    "color": "#1572B6",
-                    "glowColor": "rgba(21, 114, 182, 0.4)"
+                    "color": "#33A9FF",
+                    "glowColor": "rgba(51, 169, 255, 0.4)"
                 },
                 {
-                    "name": "Laravel",
-                    "devicon": "devicon-laravel-plain colored",
-                    "icon": "fab fa-laravel",
-                    "color": "#FF2D20",
-                    "glowColor": "rgba(255, 45, 32, 0.4)"
+                    "name": "Firebase",
+                    "devicon": "devicon-firebase-plain colored",
+                    "icon": "fas fa-fire",
+                    "color": "#FFCA28",
+                    "glowColor": "rgba(255, 202, 40, 0.4)"
+                },
+                {
+                    "name": "AWS",
+                    "devicon": "devicon-amazonwebservices-plain colored",
+                    "icon": "fab fa-aws",
+                    "color": "#FF9900",
+                    "glowColor": "rgba(255, 153, 0, 0.4)"
+                }
+            ]
+        },
+        {
+            "icon": "fas fa-cube",
+            "iconColor": "danger",
+            "title": "Graphic Design, 3D, and Animations",
+            "description": "Engaging motion styles, detailed 3D visualization models, vector brand arts, and rich animations.",
+            "techStack": [
+                {
+                    "name": "Blender",
+                    "devicon": "devicon-blender-original colored",
+                    "icon": "fas fa-cube",
+                    "color": "#E87D0D",
+                    "glowColor": "rgba(232, 125, 13, 0.4)"
+                },
+                {
+                    "name": "Adobe After Effects",
+                    "devicon": "devicon-aftereffects-plain colored",
+                    "icon": "fas fa-film",
+                    "color": "#9999FF",
+                    "glowColor": "rgba(153, 153, 255, 0.4)"
+                },
+                {
+                    "name": "Lottie",
+                    "icon": "fas fa-play-circle",
+                    "color": "#00CBB4",
+                    "glowColor": "rgba(0, 203, 180, 0.4)"
+                },
+                {
+                    "name": "3ds Max",
+                    "icon": "fas fa-cube",
+                    "color": "#37A5CC",
+                    "glowColor": "rgba(55, 165, 204, 0.4)"
+                },
+                {
+                    "name": "Adobe Illustrator",
+                    "devicon": "devicon-illustrator-plain colored",
+                    "icon": "fas fa-bezier-curve",
+                    "color": "#FF9A00",
+                    "glowColor": "rgba(255, 154, 0, 0.4)"
+                },
+                {
+                    "name": "Adobe Photoshop",
+                    "devicon": "devicon-photoshop-plain colored",
+                    "icon": "fas fa-image",
+                    "color": "#31A8FF",
+                    "glowColor": "rgba(49, 168, 255, 0.4)"
+                },
+                {
+                    "name": "Canva",
+                    "devicon": "devicon-canva-original colored",
+                    "icon": "fas fa-palette",
+                    "color": "#00C4CC",
+                    "glowColor": "rgba(0, 196, 204, 0.4)"
+                },
+                {
+                    "name": "CapCut",
+                    "icon": "fas fa-video",
+                    "color": "#25F4EE",
+                    "glowColor": "rgba(37, 244, 238, 0.4)"
                 }
             ]
         },
         {
             "icon": "fas fa-pen-nib",
             "iconColor": "warning",
-            "title": "App & Web Designs",
-            "description": "User-centric UI/UX design ensuring intuitive flows and stunning visual aesthetics.",
+            "title": "App and Web Design",
+            "description": "Stunning user interface visual assets, intuitive layout wires, and complete digital product layouts.",
             "techStack": [
                 {
                     "name": "Figma",
@@ -100,7 +230,7 @@
                     "glowColor": "rgba(255, 97, 246, 0.4)"
                 },
                 {
-                    "name": "Photoshop",
+                    "name": "Adobe Photoshop",
                     "devicon": "devicon-photoshop-plain colored",
                     "icon": "fas fa-image",
                     "color": "#31A8FF",
@@ -109,51 +239,37 @@
             ]
         },
         {
-            "icon": "fas fa-cube",
-            "iconColor": "danger",
-            "title": "Graphics, 3D & Animations",
-            "description": "Engaging visual content, interactive 3D elements, and smooth micro-animations.",
-            "techStack": [
-                {
-                    "name": "Blender",
-                    "devicon": "devicon-blender-original colored",
-                    "icon": "fas fa-cube",
-                    "color": "#E87D0D",
-                    "glowColor": "rgba(232, 125, 13, 0.4)"
-                },
-                {
-                    "name": "After Effects",
-                    "icon": "fas fa-film",
-                    "color": "#9999FF",
-                    "glowColor": "rgba(153, 153, 255, 0.4)"
-                },
-                {
-                    "name": "Lottie",
-                    "icon": "fas fa-play-circle",
-                    "color": "#00CBB4",
-                    "glowColor": "rgba(0, 203, 180, 0.4)"
-                }
-            ]
-        },
-        {
             "icon": "fas fa-robot",
             "iconColor": "success",
             "title": "Robotics",
-            "description": "Designing and building autonomous robots, IoT solutions, and custom embedded systems.",
+            "description": "Engineering high-end autonomous robotics systems, IoT devices, and physical-to-digital controllers.",
             "techStack": [
                 {
-                    "name": "Arduino & ESP32",
+                    "name": "Arduino",
                     "devicon": "devicon-arduino-plain colored",
                     "icon": "fas fa-microchip",
-                    "color": "#00979C",
-                    "glowColor": "rgba(0, 151, 156, 0.4)"
+                    "color": "#00D2D8",
+                    "glowColor": "rgba(0, 210, 216, 0.4)"
+                },
+                {
+                    "name": "ESP32",
+                    "icon": "fas fa-microchip",
+                    "color": "#E7352C",
+                    "glowColor": "rgba(231, 53, 44, 0.4)"
+                },
+                {
+                    "name": "Raspberry Pi",
+                    "devicon": "devicon-raspberrypi-line colored",
+                    "icon": "fab fa-raspberry-pi",
+                    "color": "#FF2B6D",
+                    "glowColor": "rgba(255, 43, 109, 0.4)"
                 },
                 {
                     "name": "C++",
                     "devicon": "devicon-cplusplus-plain colored",
                     "icon": "fas fa-code",
-                    "color": "#00599C",
-                    "glowColor": "rgba(0, 89, 156, 0.4)"
+                    "color": "#619BE4",
+                    "glowColor": "rgba(97, 155, 228, 0.4)"
                 },
                 {
                     "name": "CAD / 3D Printing",
@@ -166,6 +282,32 @@
                     "icon": "fas fa-cogs",
                     "color": "#FFC107",
                     "glowColor": "rgba(255, 193, 7, 0.4)"
+                }
+            ]
+        },
+        {
+            "icon": "fas fa-bolt",
+            "iconColor": "info",
+            "title": "Laser & 3D Printing",
+            "description": "Industrial grade laser engraving, rapid functional prototyping, and custom mechanical systems engineering.",
+            "techStack": [
+                {
+                    "name": "LightBurn",
+                    "icon": "fas fa-bolt",
+                    "color": "#E25822",
+                    "glowColor": "rgba(226, 88, 34, 0.4)"
+                },
+                {
+                    "name": "Bambu Studio",
+                    "icon": "fas fa-print",
+                    "color": "#00B0FF",
+                    "glowColor": "rgba(0, 176, 255, 0.4)"
+                },
+                {
+                    "name": "Fusion 360",
+                    "icon": "fas fa-drafting-compass",
+                    "color": "#FF6B00",
+                    "glowColor": "rgba(255, 107, 0, 0.4)"
                 }
             ]
         }
