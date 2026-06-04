@@ -293,6 +293,36 @@
             "bgColor": "#be185d"
         },
         {
+            "id": "water-refilling",
+            "title": "Water Refilling Management System",
+            "category": "Business & Admin",
+            "serviceCategory": "Website Development",
+            "description": "A Water Refilling Management System (WRMS) is a professional web-based solution designed to streamline and automate daily operations of a water refilling business. It manages customer profiles, tracks refilling orders, and coordinates deliveries and payments. The system features an interactive Kanban board for order stage management (e.g., Pending, Refilling, Delivering, Completed), a simplified checkout for new orders with custom inclusions, user authentication with password reset, and configuration settings for station pricing and inclusions—improving operational efficiency and service accuracy.",
+            "techStack": "React, Node.js, Express, Tailwind CSS, MySQL, Kanban Order Board, User Authentication",
+            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
+            "hoverImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
+            "gallery": [
+                "assets/img/portfolio/Water Refilling Management System/Dashboard.png",
+                "assets/img/portfolio/Water Refilling Management System/Login.png",
+                "assets/img/portfolio/Water Refilling Management System/Forgot Password.png",
+                "assets/img/portfolio/Water Refilling Management System/Reset Password.png",
+                "assets/img/portfolio/Water Refilling Management System/Reset Password-1.png",
+                "assets/img/portfolio/Water Refilling Management System/Orders - Kanban.png",
+                "assets/img/portfolio/Water Refilling Management System/Orders - Kanban-1.png",
+                "assets/img/portfolio/Water Refilling Management System/Orders - Kanban-2.png",
+                "assets/img/portfolio/Water Refilling Management System/Orders - Kanban-3.png",
+                "assets/img/portfolio/Water Refilling Management System/Orders - Kanban-4.png",
+                "assets/img/portfolio/Water Refilling Management System/Orders - List.png",
+                "assets/img/portfolio/Water Refilling Management System/New Order.png",
+                "assets/img/portfolio/Water Refilling Management System/New Order-1.png",
+                "assets/img/portfolio/Water Refilling Management System/Order Details.png",
+                "assets/img/portfolio/Water Refilling Management System/Add Inclusions.png",
+                "assets/img/portfolio/Water Refilling Management System/Settings.png",
+                "assets/img/portfolio/Water Refilling Management System/Settings1.png"
+            ],
+            "bgColor": "#0284c7"
+        },
+        {
             "id": "tank-robot",
             "title": "Tank Robot",
             "category": "Robotics & Embedded Systems",
