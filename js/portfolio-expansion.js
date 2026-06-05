@@ -22,6 +22,7 @@ class PortfolioExpansion {
         this.hasAnimated = false;
         this.lastTrackScrollLeft = 0;
         this.trackStalledFrames = 0;
+        this.scrollPauseFrames = 0;
 
         // Drag scroll properties
         this.isDragging = false;
@@ -51,6 +52,15 @@ class PortfolioExpansion {
     refreshCards() {
         this.scrollContainer = document.querySelector('.portfolio-horizontal-scroll');
         this.cards = document.querySelectorAll('.portfolio-card-item');
+
+        // Reset scroll position and parameters when cards are refreshed (e.g. on filtering)
+        if (this.scrollContainer) {
+            this.scrollContainer.scrollLeft = 0;
+        }
+        this.scrollDirection = 1;
+        this.scrollPauseFrames = 90; // Pause for ~1.5s to let the user see the cards static first
+        this.lastTrackScrollLeft = 0;
+        this.trackStalledFrames = 0;
 
         // Ensure new cards are interactive if we've already animated
         if (this.hasAnimated) {
@@ -151,7 +161,7 @@ class PortfolioExpansion {
             if (this.isDragging) {
                 this.isDragging = false;
                 this.scrollContainer.classList.remove('dragging');
-                this.scrollContainer.style.scrollBehavior = 'smooth';
+                this.scrollContainer.style.scrollBehavior = 'auto';
             }
         });
 
@@ -175,7 +185,7 @@ class PortfolioExpansion {
             this.scrollContainer.classList.remove('dragging');
 
             // Re-enable smooth scrolling
-            this.scrollContainer.style.scrollBehavior = 'smooth';
+            this.scrollContainer.style.scrollBehavior = 'auto';
         });
 
         this.scrollContainer.addEventListener('mousemove', (e) => {
@@ -609,8 +619,8 @@ class PortfolioExpansion {
     }
 
     startAutoScroll() {
-        // Minimum overflow required to start auto-scrolling
-        const MIN_OVERFLOW_THRESHOLD = 1;
+        // Minimum overflow required to start auto-scrolling (e.g. at least half a card's width)
+        const MIN_OVERFLOW_THRESHOLD = 150;
 
         // Force disable snap and smooth behavior for programmatic scroll
         if (this.scrollContainer) {
@@ -624,21 +634,26 @@ class PortfolioExpansion {
                 const maxScroll = Math.max(0, this.scrollContainer.scrollWidth - this.scrollContainer.clientWidth);
 
                 if (maxScroll > MIN_OVERFLOW_THRESHOLD) {
-                    // Use a slightly faster speed (1.0) for reliable pixel crossing
-                    const speed = 1.0;
-                    this.scrollContainer.scrollLeft += (speed * this.scrollDirection);
+                    if (this.scrollPauseFrames > 0) {
+                        this.scrollPauseFrames--;
+                    } else {
+                        // Use a slightly faster speed (1.0) for reliable pixel crossing
+                        const speed = 1.0;
+                        this.scrollContainer.scrollLeft += (speed * this.scrollDirection);
 
-                    // Wall Detection: If we didn't move after scrolling, flip direction
-                    if (Math.abs(this.scrollContainer.scrollLeft - this.lastTrackScrollLeft) < 0.1) {
-                        this.trackStalledFrames++;
-                        if (this.trackStalledFrames > 2) { // Fast flip
-                            this.scrollDirection *= -1;
+                        // Wall Detection: If we didn't move after scrolling, flip direction and pause
+                        if (Math.abs(this.scrollContainer.scrollLeft - this.lastTrackScrollLeft) < 0.1) {
+                            this.trackStalledFrames++;
+                            if (this.trackStalledFrames > 2) { // Pause and flip
+                                this.scrollDirection *= -1;
+                                this.trackStalledFrames = 0;
+                                this.scrollPauseFrames = 90; // Pause for ~1.5 seconds
+                            }
+                        } else {
                             this.trackStalledFrames = 0;
                         }
-                    } else {
-                        this.trackStalledFrames = 0;
+                        this.lastTrackScrollLeft = this.scrollContainer.scrollLeft;
                     }
-                    this.lastTrackScrollLeft = this.scrollContainer.scrollLeft;
                 } else {
                     // Reset to start if no overflow
                     if (currentScroll > 0) {

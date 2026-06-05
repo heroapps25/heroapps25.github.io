@@ -30,7 +30,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     padding: 50px 0;
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     /* Firefox */
