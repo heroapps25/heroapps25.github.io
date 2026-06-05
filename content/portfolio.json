@@ -323,6 +323,25 @@
             "bgColor": "#0284c7"
         },
         {
+            "id": "admin-template",
+            "title": "Admin Template",
+            "category": "Business & Admin",
+            "serviceCategory": "Website Development",
+            "description": "A clean, modern, and highly modular Admin Template designed to streamline back-end panel development and SaaS management systems. Built with structured components and responsive layouts, it includes customized styles for forms, tables, data display cards, action buttons, alert banners, and badges. This template provides a solid foundation for dashboard development, ensuring a fast, intuitive, and developer-friendly implementation workflow.",
+            "techStack": "React, Sass, Tailwind CSS, HTML5, Responsive Layout, Data Tables, Forms & UI Components",
+            "cardImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
+            "hoverImage": "assets/img/portfolio/New Assets/heroapps_card (1).png",
+            "gallery": [
+                "assets/img/portfolio/Admin Template/image (13).png",
+                "assets/img/portfolio/Admin Template/image (8).png",
+                "assets/img/portfolio/Admin Template/image (7).png",
+                "assets/img/portfolio/Admin Template/image (10).png",
+                "assets/img/portfolio/Admin Template/image (11).png",
+                "assets/img/portfolio/Admin Template/image (9).png"
+            ],
+            "bgColor": "#1e293b"
+        },
+        {
             "id": "tank-robot",
             "title": "Tank Robot",
             "category": "Robotics & Embedded Systems",
