@@ -231,7 +231,7 @@
         },
         {
             "id": "android-material",
-            "title": "Android Material",
+            "title": "Material Design (KMP/React Native)",
             "category": "Utility & Templates",
             "serviceCategory": "Mobile App Development",
             "description": "A modern Android application template built following Material Design principles, providing a clean, intuitive, and responsive user experience while serving as a foundation for various mobile application projects.",
@@ -273,13 +273,13 @@
         },
         {
             "id": "android-webview",
-            "title": "Android WebView",
+            "title": "WebView (KMP/React Native)",
             "category": "Utility & Templates",
             "serviceCategory": "Mobile App Development",
             "description": "A feature-rich Android solution that converts websites into fully functional mobile applications, enabling businesses to quickly establish their mobile presence with support for custom branding and essential mobile features.",
             "techStack": "React Native, Compose Multiplatform, Kotlin, TypeScript, WebView, Custom Branding",
             "cardImage": "assets/img/portfolio/webview/webview_card.png",
-            "hoverImage": "assets/img/portfolio/webview/Web View.mp4",
+            "hoverImage": "assets/img/portfolio/webview/Final Web View app_1.mp4",
             "gallery": [
                 "assets/img/portfolio/material3/iPhone 16 Pro - 8.png",
                 "assets/img/portfolio/material3/iPhone 16 Pro - 25.png",
@@ -1003,7 +1003,7 @@
             "gallery": [
                 "assets/img/portfolio/New Assets/material3_asset.png"
             ],
-            "bgColor": "#1e293b"    
+            "bgColor": "#1e293b"
         },
         {
             "id": "webview-app-assets",
